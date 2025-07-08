@@ -1,0 +1,46 @@
+{
+  "Title": "Gosu Experiment",
+  "Version": 2,
+  "Name": "Hackathon",
+  "ActiveTab": "src/main/gosu/scratch/Vehicle.gs",
+  "Tabs": [
+    "src/main/gosu/scratch/Customer.gs",
+    "src/main/gosu/scratch/DrivingHistory.gs",
+    "src/main/gosu/scratch/Quote.gs",
+    "src/main/gosu/scratch/Vehicle.gs"
+  ],
+  "SourcePath": [
+    "src/main/gosu"
+  ],
+  "BackingSource": [
+    "C:/Program Files/Java/jdk1.8.0_112/src.zip",
+    "C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip"
+  ],
+  "RunConfigs": [
+    {
+      "$construct_type": "editor.run.ProgramRunConfig",
+      "_params": {
+        "$construct_type": "editor.run.ProgramRunConfigParameters",
+        "_name": "Unnamed",
+        "_fqn": "scratch.RunMe",
+        "_vmArgs": null,
+        "_progArgs": null,
+        "_workingDir": null,
+        "_jre": null,
+        "_bJre": 0
+      }
+    }
+  ],
+  "MruRunConfig": "Unnamed",
+  "Settings": [
+    {
+      "$construct_type": "editor.settings.CompilerSettings",
+      "_params": {
+        "$construct_type": "editor.settings.CompilerSettingsParameters",
+        "_sourceBased": 1,
+        "_ouputPath": "classes"
+      }
+    }
+  ],
+  "MruSettings": null
+}
