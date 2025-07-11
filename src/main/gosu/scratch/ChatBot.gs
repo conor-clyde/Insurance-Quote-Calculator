@@ -85,9 +85,43 @@ class ChatBot {
     
     _newCustomer.Name = askStringQuestion("Name")
     _newCustomer.Gender = askStringQuestion("Gender")
-    _newCustomer.Age = askIntQuestion("Age")
-    _newCustomer.DrivingYears = askIntQuestion("Years of driving experience")
+    
+    // Collect date of birth
+    var dateOfBirth = Validation.getValidatedDate("Date of birth")
+    while (not Validation.isDateNotInFuture(dateOfBirth) || not Validation.isDateReasonable(dateOfBirth)) {
+      print("Invalid date. Please enter a valid date of birth (not in the future and not too far in the past).")
+      dateOfBirth = Validation.getValidatedDate("Date of birth")
+    }
+    _newCustomer.setDateOfBirth(dateOfBirth)
+    
+    // Collect date of licence
+    var dateOfLicence = Validation.getValidatedDate("Date of licence")
+    while (not Validation.isDateNotInFuture(dateOfLicence) || not Validation.isDateReasonable(dateOfLicence) || dateOfLicence.isBefore(dateOfBirth)) {
+      print("Invalid date. Please enter a valid date of licence (not in the future, not too far in the past, and after date of birth).")
+      dateOfLicence = Validation.getValidatedDate("Date of licence")
+    }
+    _newCustomer.setDateOfLicence(dateOfLicence)
+    
     _newCustomer.Occupation = askStringQuestion("Occupation")
+    
+    // Validate customer information
+    if (not _newCustomer.isValidCustomer()) {
+      print("Invalid customer information:")
+      if (not _newCustomer.validateAge()) {
+        print("  - Age must be between 21 and 85 years")
+      }
+      if (not _newCustomer.validateDrivingYears()) {
+        print("  - Driving years must be positive and reasonable")
+      }
+      if (not _newCustomer.validateOccupation()) {
+        print("  - Professional gamblers are not eligible")
+      }
+      if (not _newCustomer.validateDates()) {
+        print("  - Date of licence must be after date of birth")
+      }
+      print("Please re-enter your details.")
+      return partOne()
+    }
     
     print("Please confirm your details:")
     print(_newCustomer.toString())
