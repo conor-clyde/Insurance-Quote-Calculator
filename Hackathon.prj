@@ -2,13 +2,14 @@
   "Title": "Gosu Experiment",
   "Version": 2,
   "Name": "Hackathon",
-  "ActiveTab": "src/main/gosu/scratch/RunMe.gsp",
+  "ActiveTab": "src/main/gosu/app/QuoteFlowController.gs",
   "Tabs": [
-    "src/main/gosu/scratch/Customer.gs",
-    "src/main/gosu/scratch/DrivingHistory.gs",
-    "src/main/gosu/scratch/Quote.gs",
-    "src/main/gosu/scratch/Vehicle.gs",
-    "src/main/gosu/scratch/RunMe.gsp"
+    "src/main/gosu/app/QuoteFlowController.gs",
+    "src/main/gosu/service/ValidationEngine.gs",
+    "src/main/gosu/domain/DrivingHistory.gs",
+    "src/main/gosu/domain/Quote.gs",
+    "src/main/gosu/service/QuoteDataOrchestrator.gs",
+    "src/main/gosu/service/BusinessRuleValidator.gs"
   ],
   "SourcePath": [
     "src/main/gosu"
@@ -23,7 +24,7 @@
       "_params": {
         "$construct_type": "editor.run.ProgramRunConfigParameters",
         "_name": "Unnamed",
-        "_fqn": "scratch.RunMe",
+        "_fqn": "app.RunMe",
         "_vmArgs": null,
         "_progArgs": null,
         "_workingDir": null,
