@@ -104,12 +104,12 @@ class BusinessRuleValidator {
     var hasNonMotorConvictions = nonMotorConvictions > 0
     
     // Accident numbers
-    var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)
+    var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler, 0, null)
     if (nonFaultAccidents == null) {
       return null 
     }
     
-    var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)
+    var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler, 0, null)
     if (faultAccidents == null) {
       return null 
     }

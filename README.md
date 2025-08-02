@@ -6,6 +6,37 @@
 [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+## 🎬 Demo & Screenshots
+
+### **Application Flow Demo**
+![Application Demo](docs/images/app-demo.gif)
+
+*Complete walkthrough of the insurance quote calculation process*
+
+### **Key Screenshots**
+
+#### **Pre-Qualification Check**
+![Pre-Qualification](docs/images/pre-qualification.png)
+*Initial eligibility assessment with age, occupation, and risk validation*
+
+#### **Data Collection Process**
+![Data Collection](docs/images/data-collection.png)
+*Structured information gathering with real-time validation*
+
+#### **Quote Calculation Results**
+![Quote Results](docs/images/quote-results.png)
+*Detailed premium breakdown with discounts, penalties, and tax calculations*
+
+#### **Error Handling & Validation**
+![Error Handling](docs/images/error-handling.png)
+*Graceful error recovery with clear, actionable feedback*
+
+### **Project Structure Overview**
+![Project Structure](docs/images/project-structure.png)
+*Clean, modular architecture with separation of concerns*
+
+---
+
 ## 🏆 Project Overview
 
 A sophisticated insurance quote calculator that demonstrates advanced business logic implementation, comprehensive data validation, and professional software architecture. Built as a learning project to master the Gosu programming language while implementing real-world insurance industry rules and calculations.

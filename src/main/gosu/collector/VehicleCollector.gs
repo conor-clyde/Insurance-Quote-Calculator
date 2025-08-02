@@ -58,7 +58,7 @@ class VehicleCollector {
     print("[NOTE] Only these specific vehicles are covered. All other vehicles will be declined.")
 
     while (true) {
-      var vehicleChoice = _inputHandler.askIntQuestion("Enter your choice (0-${vehicleOptions.Count})")
+      var vehicleChoice = _inputHandler.askIntQuestion("Enter your choice (0-${vehicleOptions.Count})", 0, vehicleOptions.Count)
       if (vehicleChoice == null) {
         return null
       }

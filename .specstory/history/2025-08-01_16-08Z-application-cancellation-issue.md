@@ -9112,6 +9112,1385 @@ push and commit all changes to git
 
 _**Assistant**_
 
+I'll help you commit and push all the changes to git. Let me run the necessary git commands to stage, commit, and push your changes.
+
+
+---
+
+```bash
+git add .
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git add .
+PS C:\Users\ConorClyde\Documents\Hackathon> git add .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+warning: in the working copy of 'Hackathon.prj', LF will be replaced by CRLF the next time Git touches it   
+warning: in the working copy of '.specstory/history/2025-02-23_21-23Z-untitled.md', LF will be replaced by C
+RLF the next time Git touches it
+warning: in the working copy of '.specstory/history/2025-08-01_10-38Z-remove-logging-functionality-from-proj
+ect.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/gosu/app/ApplicationController.gs', LF will be replaced by CRLF th
+e next time Git touches it
+warning: in the working copy of 'src/main/gosu/app/QuoteFlowController.gs', LF will be replaced by CRLF the 
+next time Git touches it
+warning: in the working copy of 'src/main/gosu/app/RunMe.gsp', LF will be replaced by CRLF the next time Git
+ touches it
+warning: in the working copy of 'src/main/gosu/collector/AddressCollector.gs', LF will be replaced by CRLF t
+he next time Git touches it
+warning: in the working copy of 'src/main/gosu/collector/ClaimsHistoryCollector.gs', LF will be replaced by 
+CRLF the next time Git touches it
+warning: in the working copy of 'src/main/gosu/collector/CustomerCollector.gs', LF will be replaced by CRLF 
+the next time Git touches it
+warning: in the working copy of 'src/main/gosu/collector/DrivingHistoryCollector.gs', LF will be replaced by
+ CRLF the next time Git touches it
+warning: in the working copy of 'src/main/gosu/collector/VehicleCollector.gs', LF will be replaced by CRLF t
+he next time Git touches it
+warning: in the working copy of 'src/main/gosu/constants/Constants.gs', LF will be replaced by CRLF the next
+ time Git touches it
+warning: in the working copy of 'src/main/gosu/domain/Address.gs', LF will be replaced by CRLF the next time
+ Git touches it
+warning: in the working copy of 'src/main/gosu/domain/ClaimsHistory.gs', LF will be replaced by CRLF the nex
+t time Git touches it
+warning: in the working copy of 'src/main/gosu/domain/Customer.gs', LF will be replaced by CRLF the next tim
+e Git touches it
+warning: in the working copy of 'src/main/gosu/domain/DrivingHistory.gs', LF will be replaced by CRLF the ne
+xt time Git touches it
+warning: in the working copy of 'src/main/gosu/domain/PreQualResult.gs', LF will be replaced by CRLF the nex
+t time Git touches it
+warning: in the working copy of 'src/main/gosu/domain/Quote.gs', LF will be replaced by CRLF the next time G
+it touches it
+warning: in the working copy of 'src/main/gosu/domain/Vehicle.gs', LF will be replaced by CRLF the next time
+ Git touches it
+warning: in the working copy of 'src/main/gosu/domain/VehicleOption.gs', LF will be replaced by CRLF the nex
+t time Git touches it
+warning: in the working copy of 'src/main/gosu/service/BusinessRuleValidator.gs', LF will be replaced by CRL
+F the next time Git touches it
+warning: in the working copy of 'src/main/gosu/service/QuoteDataOrchestrator.gs', LF will be replaced by CRL
+F the next time Git touches it
+warning: in the working copy of 'src/main/gosu/service/ValidationEngine.gs', LF will be replaced by CRLF the
+ next time Git touches it
+warning: in the working copy of 'src/main/gosu/util/InputHandler.gs', LF will be replaced by CRLF the next t
+ime Git touches it
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+```bash
+git status
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .cursorindexingignore
+        modified:   .gitignore
+        new file:   .specstory/.gitignore
+        new file:   .specstory/history/2025-02-23_21-23Z-untitled.md
+        new file:   .specstory/history/2025-07-04_09-33Z-check-github-repo-connection.md
+        new file:   .specstory/history/2025-07-08_08-26Z-improving-my-hackathon-project-for-github.md       
+        new file:   .specstory/history/2025-07-08_10-37Z-(1)-improve-project-visibility-on-github.md        
+        new file:   .specstory/history/2025-07-08_10-37Z-improve-project-visibility-on-github.md
+        new file:   .specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md
+        new file:   .specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md
+        new file:   .specstory/history/2025-07-20_22-32Z-improve-project-quality-and-outcomes.md
+        new file:   .specstory/history/2025-08-01_10-38Z-remove-logging-functionality-from-project.md       
+        new file:   .specstory/history/2025-08-01_16-08Z-application-cancellation-issue.md
+        deleted:    CONTRIBUTING.md
+        modified:   Hackathon.prj
+        modified:   LICENSE
+        deleted:    PROJECT_PRESENTATION.md
+        modified:   README.md
+        deleted:    TECHNICAL_DOCUMENTATION.md
+        new file:   docs/README.md
+        new file:   docs/images/README.md
+        new file:   src/main/gosu/app/ApplicationController.gs
+        new file:   src/main/gosu/app/QuoteFlowController.gs
+        new file:   src/main/gosu/app/RunMe.gsp
+        new file:   src/main/gosu/collector/AddressCollector.gs
+        new file:   src/main/gosu/collector/ClaimsHistoryCollector.gs
+        new file:   src/main/gosu/collector/CustomerCollector.gs
+        new file:   src/main/gosu/collector/DrivingHistoryCollector.gs
+        new file:   src/main/gosu/collector/VehicleCollector.gs
+        new file:   src/main/gosu/constants/Constants.gs
+        new file:   src/main/gosu/domain/Address.gs
+        new file:   src/main/gosu/domain/ClaimsHistory.gs
+        new file:   src/main/gosu/domain/Customer.gs
+        new file:   src/main/gosu/domain/DrivingHistory.gs
+        new file:   src/main/gosu/domain/PreQualResult.gs
+        new file:   src/main/gosu/domain/Quote.gs
+        new file:   src/main/gosu/domain/Vehicle.gs
+        new file:   src/main/gosu/domain/VehicleOption.gs
+        deleted:    src/main/gosu/scratch/Address.gs
+        deleted:    src/main/gosu/scratch/ChatBot.gs
+        deleted:    src/main/gosu/scratch/ClaimsHistory.gs
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+```bash
+git commit -m "Complete project overhaul: Enhanced insurance quote calculator with professional architecture and comprehensive documentation
+
+- 🏗️ Implemented complete Gosu-based insurance quote calculator
+- 📝 Added comprehensive README with professional documentation
+- 🔧 Enhanced user experience with improved error handling and validation
+- 🎯 Streamlined data collection flow eliminating redundant inputs
+- 💼 Added sophisticated business rules and premium calculation
+- 🛡️ Implemented robust validation engine and error recovery
+- 📊 Added detailed project structure and architecture documentation
+- 🚀 Improved application flow with confirmation steps and restart options
+- 🎨 Enhanced visual presentation with professional formatting
+- 📈 Documented project evolution and learning outcomes"
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git commit -m "Complete project overhaul: Enhanced insurance quo
+te calculator with professional arch        git commit -m "Complete project overhaul: Enhanced insurance quo
+>> -  Implemented complete Gosu-based insurance quot
+Oops, something went wrong.  Please report this bug with the details below.
+Report on GitHub: https://github.com/PowerShell/PSReadLine/issues/new
+### Environment
+PSReadLine: 2.0.0
+PowerShell: 5.1.26100.4061
+OS: Microsoft Windows 10.0.26100
+Last 200 Keys
+```
+ s Enter
+ Ctrl+c g i t Spacebar c o m m i t Spacebar - m Spacebar " C o m p l e t e Spacebar p r o j e c t Spacebar o
+ v e r h a u l : Spacebar E n h a n c e d Spacebar i n s u r a n c e Spacebar q u o t e Spacebar c a l c u l
+ a t o r Spacebar w i t h Spacebar p r o f e s s i o n a l Spacebar a r c h i t e c t u r e Spacebar a n d S
+pacebar c o m p r e h e n s i v e Spacebar d o c u m e n t a t i o n Enter
+ Enter
+ - Spacebar Spacebar I m p l e m e n t e d Spacebar c o m p l e t e Spacebar G o s u - b a s e d Spacebar i 
+n s u r a n c e Spacebar q u o t e Spacebar c a l c
+```
+
+### Exception
+```
+System.ArgumentOutOfRangeException: The value must be greater than or equal to zero and less than the consol
+e's buffer size in that dimension.
+Parameter name: top
+Actual value was 4.
+   at System.Console.SetCursorPosition(Int32 left, Int32 top)
+   at Microsoft.PowerShell.PSConsoleReadLine.ReallyRender(RenderData renderData, String defaultColor)       
+   at Microsoft.PowerShell.PSConsoleReadLine.ForceRender()
+   at Microsoft.PowerShell.PSConsoleReadLine.Insert(Char c)
+   at Microsoft.PowerShell.PSConsoleReadLine.SelfInsert(Nullable`1 key, Object arg)
+   at Microsoft.PowerShell.PSConsoleReadLine.ProcessOneKey(PSKeyInfo key, Dictionary`2 dispatchTable, Boolea
+n ignoreIfNoAction, Object arg)
+   at Microsoft.PowerShell.PSConsoleReadLine.InputLoop()
+   at Microsoft.PowerShell.PSConsoleReadLine.ReadLine(Runspace runspace, EngineIntrinsics engineIntrinsics, 
+CancellationToken cancellationToken)
+```
+
+PS C:\Users\ConorClyde\Documents\Hackathon> git commit -m "Complete project overhaul: Enhanced insurance quo
+te calculator with professional architecture and comprehensive documentation
+>> -  Added detailed project structure and architecture documentation
+>> -  Improved application flow with confirmation steps and restart options
+>> -  Enhanced visual presentation with professional formatting
+>> -  Documented project evolution and learning outcomes"
+[main 1370966] Complete project overhaul: Enhanced insurance quote calculator with professional architecture
+ and comprehensive documentation
+ 52 files changed, 89033 insertions(+), 1740 deletions(-)
+ create mode 100644 .cursorindexingignore
+ create mode 100644 .specstory/.gitignore
+ create mode 100644 .specstory/history/2025-02-23_21-23Z-untitled.md
+ create mode 100644 .specstory/history/2025-07-04_09-33Z-check-github-repo-connection.md
+ create mode 100644 .specstory/history/2025-07-08_08-26Z-improving-my-hackathon-project-for-github.md
+ create mode 100644 .specstory/history/2025-07-08_10-37Z-(1)-improve-project-visibility-on-github.md
+ create mode 100644 .specstory/history/2025-07-08_10-37Z-improve-project-visibility-on-github.md
+ create mode 100644 .specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md
+ create mode 100644 .specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md
+ create mode 100644 .specstory/history/2025-07-20_22-32Z-improve-project-quality-and-outcomes.md
+ create mode 100644 .specstory/history/2025-08-01_10-38Z-remove-logging-functionality-from-project.md       
+ create mode 100644 .specstory/history/2025-08-01_16-08Z-application-cancellation-issue.md
+ delete mode 100644 CONTRIBUTING.md
+ delete mode 100644 PROJECT_PRESENTATION.md
+ delete mode 100644 TECHNICAL_DOCUMENTATION.md
+ create mode 100644 docs/README.md
+ create mode 100644 docs/images/README.md
+ create mode 100644 src/main/gosu/app/ApplicationController.gs
+ create mode 100644 src/main/gosu/app/QuoteFlowController.gs
+ create mode 100644 src/main/gosu/app/RunMe.gsp
+ create mode 100644 src/main/gosu/collector/AddressCollector.gs
+ create mode 100644 src/main/gosu/collector/ClaimsHistoryCollector.gs
+ create mode 100644 src/main/gosu/collector/CustomerCollector.gs
+ create mode 100644 src/main/gosu/collector/DrivingHistoryCollector.gs
+ create mode 100644 src/main/gosu/collector/VehicleCollector.gs
+ create mode 100644 src/main/gosu/constants/Constants.gs
+ create mode 100644 src/main/gosu/domain/Address.gs
+ create mode 100644 src/main/gosu/domain/ClaimsHistory.gs
+ create mode 100644 src/main/gosu/domain/Customer.gs
+ create mode 100644 src/main/gosu/domain/DrivingHistory.gs
+ create mode 100644 src/main/gosu/domain/PreQualResult.gs
+ create mode 100644 src/main/gosu/domain/Quote.gs
+ create mode 100644 src/main/gosu/domain/Vehicle.gs
+ create mode 100644 src/main/gosu/domain/VehicleOption.gs
+ delete mode 100644 src/main/gosu/scratch/Address.gs
+ delete mode 100644 src/main/gosu/scratch/ChatBot.gs
+ delete mode 100644 src/main/gosu/scratch/ClaimsHistory.gs
+ delete mode 100644 src/main/gosu/scratch/Constants.gs
+ delete mode 100644 src/main/gosu/scratch/Customer.gs
+ delete mode 100644 src/main/gosu/scratch/DrivingHistory.gs
+ delete mode 100644 src/main/gosu/scratch/Quote.gs
+ delete mode 100644 src/main/gosu/scratch/RunMe.gsp
+ delete mode 100644 src/main/gosu/scratch/Validation.gs
+ delete mode 100644 src/main/gosu/scratch/Vehicle.gs
+ create mode 100644 src/main/gosu/service/BusinessRuleValidator.gs
+ create mode 100644 src/main/gosu/service/QuoteDataOrchestrator.gs
+ create mode 100644 src/main/gosu/service/ValidationEngine.gs
+ create mode 100644 src/main/gosu/util/InputHandler.gs
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+```bash
+git push origin main
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git push origin main
+Enumerating objects: 62, done.
+Delta compression using up to 16 threads
+Total 54 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/conor-clyde/Insurance-Quote-Calculator.git
+To https://github.com/conor-clyde/alchemy-gosu-hackathon.git
+   f8955e5..1370966  main -> main
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+Perfect! 🎉 All your changes have been successfully committed and pushed to GitHub. Here's what was accomplished:
+
+## ✅ **Successfully Committed & Pushed:**
+
+### **�� Commit Statistics:**
+- **52 files changed**
+- **89,033 insertions** (new code and documentation)
+- **1,740 deletions** (cleaned up old files)
+- **Commit hash:** `1370966`
+
+### **📁 Major Changes Included:**
+- **Complete Gosu application** with all source files
+- **Professional README** with comprehensive documentation
+- **Project structure** with proper organization
+- **Documentation files** in the `docs/` directory
+- **Git configuration** files (`.gitignore`, etc.)
+- **Development history** in `.specstory/` directory
+
+### **🗂️ Files Added:**
+- All Gosu source files in `src/main/gosu/`
+- Professional README with badges and documentation
+- Project configuration files
+- Documentation structure
+
+### **��️ Files Removed:**
+- Old scratch files and temporary documentation
+- Outdated project files
+
+## 🚀 **Repository Status:**
+Your repository is now live at: **https://github.com/conor-clyde/Insurance-Quote-Calculator.git**
+
+The push was successful, and GitHub even noted that your repository has moved to a new location with a more professional name!
+
+## �� **What This Means:**
+1. **Your project is now live** on GitHub with all the latest improvements
+2. **Professional presentation** with the comprehensive README
+3. **Complete codebase** with all the enhancements we made
+4. **Ready for portfolio** - perfect for showcasing to potential employers
+5. **Version controlled** - all changes are tracked and documented
+
+Your insurance quote calculator project is now ready to impress anyone who visits your GitHub profile! 🏆
+
+---
+
+_**User**_
+
+should my license say 2025 not 2024?
+
+---
+
+_**Assistant**_
+
+You're absolutely right! Let me check your current LICENSE file and update it to 2025.
+
+
+---
+
+Read file: LICENSE
+
+---
+
+Yes, you're absolutely correct! The LICENSE file currently says 2024, but since we're now in 2025, it should be updated. Let me fix that for you.
+
+
+---
+
+<details><summary>Edit file: LICENSE</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -1,5 +1,5 @@
+  MIT License
+  
+- Copyright (c) 2024 Conor Clyde
++ Copyright (c) 2025 Conor Clyde
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+```
+
+</details>
+
+---
+
+Perfect! Now let me commit and push this update to keep your repository current.
+
+
+---
+
+```bash
+git add LICENSE
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git add LICENSE
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+```bash
+git commit -m "Update LICENSE copyright year to 2025"
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git commit -m "Update LICENSE copyright year to 2025"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+```bash
+git push origin main
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/conor-clyde/Insurance-Quote-Calculator.git
+To https://github.com/conor-clyde/alchemy-gosu-hackathon.git
+   1370966..6aa5b6f  main -> main
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+Perfect! ✅ The LICENSE file has been updated and pushed to GitHub. 
+
+## �� **What was updated:**
+- **Changed copyright year** from 2024 to 2025
+- **Committed** the change with a clear message
+- **Pushed** to GitHub successfully
+
+## �� **Why this matters:**
+- **Legal accuracy** - The copyright year should reflect when the work was created/published
+- **Professional presentation** - Shows attention to detail
+- **Current status** - Indicates the project is actively maintained
+
+Your repository is now completely up-to-date with the correct copyright year! 🚀
+
+---
+
+_**User**_
+
+commit this change too
+
+---
+
+_**Assistant**_
+
+I can see you've made the change to the LICENSE file. Let me commit this change for you.
+
+
+---
+
+```bash
+git add LICENSE
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git add LICENSE
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+```bash
+git commit -m "Update LICENSE copyright year to 2025"
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git commit -m "Update LICENSE copyright year to 2025"
+On branch main
+
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+It looks like there were no changes to commit, which means the LICENSE file was already updated in the previous commit. Let me check the current status to confirm:
+
+
+---
+
+```bash
+git status
+```
+
+```
+PS C:\Users\ConorClyde\Documents\Hackathon> git status
+On branch main
+
+PS C:\Users\ConorClyde\Documents\Hackathon>
+```
+
+---
+
+Perfect! ✅ The change has already been committed and pushed to GitHub. 
+
+## **Status:**
+- **Working directory is clean** - No uncommitted changes
+- **LICENSE file is already updated** to 2025
+- **All changes are committed** and pushed to GitHub
+
+The LICENSE file copyright year update was already handled in the previous commit we made. Your repository is completely up-to-date with the correct 2025 copyright year! 🚀
+
+---
+
+_**User**_
+
+I want the project to be visible at a glance witout going deep into th code is there a way i can add some sort of screenshots or video or demo to readme?
+
+
+---
+
+_**Assistant**_
+
+Absolutely! Adding visual elements like screenshots, GIFs, or videos to your README is a fantastic way to showcase your project at a glance. Let me help you create some visual content and update your README.
+
+First, let me check if you have any existing images or if we need to create them:
+
+
+---
+
+<details>
+            <summary>Listed directory docs/images • **1** results</summary>
+        
+| Name |
+|-------|
+| 📄 `README.md` |
+
+</details>
+
+---
+
+Let me create a comprehensive visual section for your README. I'll add placeholders for screenshots and create a demo section that shows the application flow:
+
+
+---
+
+<details><summary>Edit file: README.md</summary>
+
+I'm adding a visual demo section with screenshots and GIF placeholders to make the project immediately visible and engaging for visitors.
+
+**Chunk 1**
+Lines added: 31, lines removed: undefined
+
+```diff
+@@ -6,4 +6,35 @@
+  [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
+  [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
++ 
++ ## 🎬 Demo & Screenshots
++ 
++ ### **Application Flow Demo**
++ ![Application Demo](docs/images/app-demo.gif)
++ 
++ *Complete walkthrough of the insurance quote calculation process*
++ 
++ ### **Key Screenshots**
++ 
++ #### **Pre-Qualification Check**
++ ![Pre-Qualification](docs/images/pre-qualification.png)
++ *Initial eligibility assessment with age, occupation, and risk validation*
++ 
++ #### **Data Collection Process**
++ ![Data Collection](docs/images/data-collection.png)
++ *Structured information gathering with real-time validation*
++ 
++ #### **Quote Calculation Results**
++ ![Quote Results](docs/images/quote-results.png)
++ *Detailed premium breakdown with discounts, penalties, and tax calculations*
++ 
++ #### **Error Handling & Validation**
++ ![Error Handling](docs/images/error-handling.png)
++ *Graceful error recovery with clear, actionable feedback*
++ 
++ ### **Project Structure Overview**
++ ![Project Structure](docs/images/project-structure.png)
++ *Clean, modular architecture with separation of concerns*
++ 
++ ---
+  
+  ## 🏆 Project Overview
+```
+
+</details>
+
+---
+
+Now let me create a simple script to help you capture screenshots and create a demo GIF. I'll also create placeholder files for the images:
+
+
+---
+
+<details><summary>Edit file: docs/images/README.md</summary>
+
+I'm updating the images README to provide instructions for creating screenshots and demos for the project.
+
+**Chunk 1**
+Lines added: 158, lines removed: 82
+
+```diff
+@@ -1,90 +1,166 @@
+- # 📸 Images and Visual Assets
++ # 📸 Project Images & Demos
+  
+- This folder contains visual assets for the Insurance Quote Calculator project.
++ This directory contains visual assets for the Insurance Quote Calculator project.
+  
+- ## 🎯 Required Images
++ ## 🖼️ Required Images
+  
+- ### High Priority
+- - [ ] **banner-placeholder.png** - Project banner/logo (1200x400px recommended)
+- - [ ] **demo-placeholder.gif** - Animated demo of the chatbot in action
+- - [ ] **architecture.png** - Clean architecture diagram
+- - [ ] **app-flow.png** - Application flow diagram
+- 
+- ### Medium Priority
+- - [ ] **sample-output.png** - Screenshot of sample quote output
+- - [ ] **code-screenshot.png** - Clean code screenshot
+- - [ ] **team-photo.png** - Team photo (if available)
+- 
+- ## 🎨 Image Guidelines
+- 
+- ### Banner Image
+- - **Size**: 1200x400px or similar aspect ratio
+- - **Style**: Professional, insurance/tech themed
+- - **Colors**: Blue/white theme to match project
+- - **Content**: Project name, maybe some insurance/tech icons
+- 
+- ### Demo GIF
+- - **Duration**: 30-60 seconds
+- - **Content**: Show the chatbot asking questions and calculating a quote
+- - **Quality**: Clear, readable text
+- - **Size**: Keep under 5MB for GitHub
+- 
+- ### Architecture Diagram
+- - **Style**: Clean, professional
+- - **Tools**: Draw.io, Lucidchart, or similar
+- - **Colors**: Consistent with project theme
+- - **Content**: Show component relationships clearly
+- 
+- ## 🛠️ Creation Tools
+- 
+- ### Free Tools
+- - **Banner**: Canva, GIMP, or online banner makers
+- - **GIF**: ScreenToGif, LICEcap, or OBS Studio
+- - **Diagrams**: Draw.io, Lucidchart (free tier)
+- - **Screenshots**: Built-in OS tools
+- 
+- ### Professional Tools
+- - **Banner**: Adobe Photoshop, Figma
+- - **GIF**: Adobe Premiere, Camtasia
+- - **Diagrams**: Visio, OmniGraffle
+- 
+- ## 📋 Image Checklist
+- 
+- Before adding images:
+- - [ ] Optimize file size (compress if needed)
+- - [ ] Use appropriate formats (PNG for diagrams, GIF for demos)
+- - [ ] Ensure accessibility (good contrast, readable text)
+- - [ ] Update README.md to reference the images
+- - [ ] Test that images display correctly on GitHub
+- 
+- ## 🎯 Example Image Descriptions
+- 
+- ### Banner
+- ```
+- ![Insurance Quote Calculator Banner](banner-placeholder.png)
+- *Professional banner showcasing the insurance quote calculator project*
+- ```
+- 
+- ### Demo
+- ```
+- ![Demo Animation](demo-placeholder.gif)
+- *Interactive demo showing the chatbot collecting data and calculating premiums*
+- ```
+- 
+- ### Architecture
+- ```
+- ![Architecture Diagram](architecture.png)
+- *Clean architecture showing component relationships and data flow*
++ ### **Screenshots to Capture:**
++ 
++ 1. **`pre-qualification.png`** - Pre-qualification check screen
++    - Show the initial welcome message
++    - Display age, occupation, and postcode input
++    - Include validation messages
++ 
++ 2. **`data-collection.png`** - Data collection process
++    - Show customer information input
++    - Display address collection
++    - Include vehicle selection
++ 
++ 3. **`quote-results.png`** - Quote calculation results
++    - Show the premium breakdown
++    - Display discounts and penalties
++    - Include final quote amount
++ 
++ 4. **`error-handling.png`** - Error handling examples
++    - Show validation error messages
++    - Display graceful error recovery
++    - Include retry options
++ 
++ 5. **`project-structure.png`** - Project architecture
++    - Screenshot of the file structure
++    - Highlight key directories
++    - Show code organization
++ 
++ ### **Demo GIF:**
++ 
++ 6. **`app-demo.gif`** - Complete application walkthrough
++    - Full quote calculation process
++    - Show user interactions
++    - Demonstrate the complete flow
++ 
++ ## 🎬 How to Create Screenshots
++ 
++ ### **Using Windows:**
++ 1. **Snipping Tool** or **Snip & Sketch** (Windows 10/11)
++ 2. **Print Screen** key for full screen
++ 3. **Alt + Print Screen** for active window
++ 
++ ### **Using Screen Recording Software:**
++ 1. **OBS Studio** (free) - for screen recording
++ 2. **ShareX** (free) - for screenshots and GIFs
++ 3. **LICEcap** (free) - for simple GIF creation
++ 
++ ## 📱 Recommended Screenshot Sizes
++ 
++ - **Screenshots**: 1200x800 pixels (16:10 ratio)
++ - **Demo GIF**: 800x600 pixels, 2-3 seconds per frame
++ - **Format**: PNG for screenshots, GIF for animations
++ 
++ ## 🎯 Screenshot Guidelines
++ 
++ ### **Pre-Qualification Screenshot:**
++ ```
++ +==============================================================+
++ |                    Insurance Quote Calculator                |
++ +==============================================================+
++ Welcome to our insurance quote calculator!
++ We'll guide you through a few questions to calculate your premium.
++ 
++ Pre-Qualification Check:
++ ------------------------
++ What is your date of birth? (dd/mm/yyyy): 15/03/1990
++ What is your occupation? Engineer
++ What is your postcode? BT47 1AB
++ How many penalty points do you have on your licence? 0
++ Pre-qualification passed! Proceeding to quote calculation...
++ ```
++ 
++ ### **Quote Results Screenshot:**
++ ```
++ +==============================================================+
++ |                    Quote Calculation Complete!               |
++ +==============================================================+
++ [BREAKDOWN] Premium Breakdown:
++    Base Premium: GBP300
++    Professional Discount (10%): -GBP30
++    Driving Experience Discount (5%): -GBP13.50
++    BT47 Postcode Discount (5%): -GBP12.83
++    Subtotal (before IPT): GBP243.67
++    Insurance Premium Tax (12%): +GBP29.24
++    = Total Premium: GBP272.91
++ ```
++ 
++ ## 🚀 Creating the Demo GIF
++ 
++ ### **Step-by-Step Process:**
++ 1. **Open your terminal/command prompt**
++ 2. **Navigate to the project directory**
++ 3. **Run the application**: `java -cp "src/main/gosu;path/to/gosu-libs/*" gw/lang/Gosu -fqn app.RunMe`
++ 4. **Record the complete flow**:
++    - Pre-qualification
++    - Customer data entry
++    - Address confirmation
++    - Vehicle selection
++    - Driving history review
++    - Claims history review
++    - Quote calculation and display
++ 
++ ### **Demo Content Should Include:**
++ - ✅ **Welcome screen** and instructions
++ - ✅ **Pre-qualification** with valid inputs
++ - ✅ **Data collection** with confirmation steps
++ - ✅ **Error handling** (show one validation error)
++ - ✅ **Quote calculation** with detailed breakdown
++ - ✅ **Final result** and retry options
++ 
++ ## 📝 Tips for Great Screenshots
++ 
++ 1. **Use a clean terminal** with good contrast
++ 2. **Choose readable fonts** (Consolas, Monaco, or similar)
++ 3. **Show realistic data** (not test data like "asdf")
++ 4. **Include error states** to show validation
++ 5. **Keep file sizes reasonable** (< 1MB for screenshots, < 5MB for GIFs)
++ 
++ ## 🔧 Tools for Creating GIFs
++ 
++ ### **Free Options:**
++ - **LICEcap** - Simple screen recording to GIF
++ - **Gifox** - Mac screen recording
++ - **ShareX** - Windows screen capture and GIF creation
++ - **OBS Studio** - Record video, then convert to GIF
++ 
++ ### **Online Converters:**
++ - **Ezgif.com** - Convert video to GIF
++ - **Giphy.com** - Create and edit GIFs
++ - **CloudConvert** - Various format conversions
++ 
++ ## 📁 File Organization
++ 
++ ```
++ docs/images/
++ ├── README.md              # This file
++ ├── app-demo.gif           # Complete application demo
++ ├── pre-qualification.png  # Pre-qualification screenshot
++ ├── data-collection.png    # Data collection screenshot
++ ├── quote-results.png      # Quote results screenshot
++ ├── error-handling.png     # Error handling screenshot
++ └── project-structure.png  # Project structure screenshot
+  ```
+  
+- ## 🚀 Quick Tips
+- 
+- 1. **Keep it simple** - Clean, professional images work best
+- 2. **Consistent branding** - Use similar colors and styles
+- 3. **Optimize for web** - Compress images for faster loading
+- 4. **Test on mobile** - Ensure images look good on all devices
+- 5. **Update documentation** - Reference new images in README
++ ## 🎨 Image Optimization
++ 
++ ### **Before Uploading:**
++ 1. **Compress images** to reduce file size
++ 2. **Optimize GIFs** for web viewing
++ 3. **Ensure readability** on different screen sizes
++ 4. **Test on GitHub** to verify display quality
++ 
++ ### **Recommended Tools:**
++ - **TinyPNG** - Image compression
++ - **GIMP** - Free image editing
++ - **Paint.NET** - Windows image editor
++ - **ImageOptim** - Mac image optimization
+  
+  ---
+  
+- **Note**: These are placeholder files. Replace with actual images to enhance your GitHub profile and impress employers! 
++ **Note:** These images will make your project much more engaging and professional on GitHub! 🚀 
+```
+
+</details>
+
+---
+
+Now let me create a simple batch script to help you capture screenshots easily:
+
+
+---
+
+<details><summary>Edit file: capture-screenshots.bat</summary>
+
+I'm creating a Windows batch script to help capture screenshots of the application for the README.
+
+**Chunk 1**
+Lines added: 38, lines removed: 1
+
+```diff
+@@ -1,1 +1,38 @@
+- 
++ @echo off
++ echo ========================================
++ echo   Insurance Quote Calculator Screenshots
++ echo ========================================
++ echo.
++ echo This script will help you capture screenshots for your README.
++ echo.
++ echo Before running this script:
++ echo 1. Make sure your terminal is set to a good size (1200x800 recommended)
++ echo 2. Use a readable font (Consolas, Monaco, or similar)
++ echo 3. Have your screenshot tool ready (Snipping Tool, ShareX, etc.)
++ echo.
++ echo Press any key to start the application...
++ pause >nul
++ 
++ echo.
++ echo Starting the application...
++ echo ========================================
++ echo.
++ 
++ REM Run the application
++ java -cp "src/main/gosu;C:\gosu-1.14.16\lib\*" gw/lang/Gosu -fqn app.RunMe
++ 
++ echo.
++ echo ========================================
++ echo Application finished.
++ echo.
++ echo Screenshots to capture:
++ echo 1. pre-qualification.png - Pre-qualification screen
++ echo 2. data-collection.png - Data collection process
++ echo 3. quote-results.png - Quote calculation results
++ echo 4. error-handling.png - Error handling examples
++ echo 5. project-structure.png - Project file structure
++ echo 6. app-demo.gif - Complete application demo
++ echo.
++ echo Place all screenshots in: docs/images/
++ echo.
++ pause 
+```
+
+</details>
+
+---
+
+Perfect! I've set up everything you need to add visual content to your README. Here's what I've created:
+
+## 🎬 **What's Been Added:**
+
+### **1. Visual Demo Section in README**
+- **Screenshot placeholders** for key application screens
+- **Demo GIF placeholder** for complete walkthrough
+- **Professional layout** with descriptions
+
+### **2. Comprehensive Screenshot Guide**
+- **Detailed instructions** in `docs/images/README.md`
+- **Specific screenshots** to capture
+- **Recommended tools** and techniques
+- **File organization** structure
+
+### **3. Screenshot Capture Script**
+- **Windows batch file** (`capture-screenshots.bat`)
+- **Easy application launching** for screenshot sessions
+- **Guidelines** for optimal captures
+
+## 📸 **Screenshots You Should Capture:**
+
+### **High Priority:**
+1. **`pre-qualification.png`** - Initial eligibility check
+2. **`data-collection.png`** - Customer/vehicle data entry
+3. **`quote-results.png`** - Premium calculation breakdown
+4. **`error-handling.png`** - Validation error examples
+5. **`project-structure.png`** - File organization
+6. **`app-demo.gif`** - Complete application walkthrough
+
+## 🛠️ **How to Create Them:**
+
+### **For Screenshots:**
+1. **Run the batch script**: `capture-screenshots.bat`
+2. **Use Snipping Tool** or **ShareX** (free)
+3. **Capture at 1200x800** resolution
+4. **Save as PNG** in `docs/images/`
+
+### **For Demo GIF:**
+1. **Use LICEcap** (free) or **ShareX**
+2. **Record the complete flow** (30-60 seconds)
+3. **Show realistic data** (not test inputs)
+4. **Include error handling** example
+5. **Keep under 5MB** for GitHub
+
+## �� **Pro Tips:**
+
+### **Terminal Setup:**
+- **Font**: Consolas, Monaco, or similar monospace
+- **Size**: 1200x800 pixels
+- **Colors**: Dark background, light text
+- **Contrast**: High contrast for readability
+
+### **Content Guidelines:**
+- **Use realistic data** (real names, dates, etc.)
+- **Show validation errors** to demonstrate robustness
+- **Include confirmation steps** to show UX
+- **Display the complete quote breakdown**
+
+## �� **Next Steps:**
+
+1. **Run the application** and capture screenshots
+2. **Create a demo GIF** showing the complete flow
+3. **Add the images** to `docs/images/`
+4. **Commit and push** the visual content
+
+Once you add these visual elements, your README will be incredibly engaging and professional! The screenshots and demo will immediately show visitors what your project does without them having to read through code or run the application themselves.
+
+Would you like me to help you with any specific part of the screenshot creation process?
+
+---
+
+_**User**_
+
+I dont need the script.  Yes, help me create the screenshots, tell me what to screenshot. Also what is the readme file in images fodler
+
+---
+
+_**Assistant**_
+
+Perfect! Let me help you create the screenshots and explain the images README file.
+
+## 📸 **What to Screenshot:**
+
+### **1. Pre-Qualification Screen (`pre-qualification.png`)**
+**When to capture:** Right after starting the app, during the pre-qualification phase
+**What to include:**
+- Welcome message
+- Pre-qualification questions (age, occupation, postcode, penalty points)
+- Show a successful pre-qualification pass
+
+**Example data to use:**
+```
+Date of birth: 15/03/1990
+Occupation: Engineer  
+Postcode: BT47 1AB
+Penalty points: 0
+```
+
+### **2. Data Collection Process (`data-collection.png`)**
+**When to capture:** During customer information collection
+**What to include:**
+- Customer details input (name, gender, driving license date)
+- Address confirmation screen
+- Vehicle selection menu
+
+**Example data to use:**
+```
+First Name: John
+Last Name: Smith
+Gender: Male
+Driving License: 15/03/2010
+Address: 123 Main Street, BT47 1AB
+Vehicle: Ford Focus (2020)
+```
+
+### **3. Quote Results (`quote-results.png`)**
+**When to capture:** After quote calculation is complete
+**What to include:**
+- Complete premium breakdown
+- All discounts and penalties
+- Final quote amount
+
+**Should show something like:**
+```
++==============================================================+
+|                    Quote Calculation Complete!               |
++==============================================================+
+[BREAKDOWN] Premium Breakdown:
+   Base Premium: GBP300
+   Professional Discount (10%): -GBP30
+   Driving Experience Discount (5%): -GBP13.50
+   BT47 Postcode Discount (5%): -GBP12.83
+   Subtotal (before IPT): GBP243.67
+   Insurance Premium Tax (12%): +GBP29.24
+   = Total Premium: GBP272.91
+```
+
+### **4. Error Handling (`error-handling.png`)**
+**When to capture:** When you intentionally enter invalid data
+**What to include:**
+- Validation error message
+- Clear error explanation
+- Retry option
+
+**Example:** Enter an invalid postcode like "ABC123" to show the validation error
+
+### **5. Project Structure (`project-structure.png`)**
+**When to capture:** Screenshot of your file explorer or IDE
+**What to include:**
+- Show the `src/main/gosu/` folder structure
+- Highlight the key directories (app, domain, service, etc.)
+- Show the clean organization
+
+## �� **Demo GIF (`app-demo.gif`)**
+**What to record:** Complete application flow from start to finish
+**Duration:** 30-60 seconds
+**Include:**
+1. Welcome screen
+2. Pre-qualification (successful)
+3. Customer data entry
+4. Address confirmation
+5. Vehicle selection
+6. Driving history review
+7. Claims history review
+8. Quote calculation and display
+9. Final result
+
+## 📁 **About the `docs/images/README.md` file:**
+
+This file is a **guide and checklist** for creating the visual content. It contains:
+
+- **Detailed instructions** for each screenshot
+- **Recommended tools** (Snipping Tool, ShareX, LICEcap)
+- **File size guidelines** and optimization tips
+- **Example content** for each screenshot
+- **Technical specifications** (dimensions, formats)
+
+It's essentially a **"how-to" guide** for making your project look professional on GitHub. You can reference it while creating the screenshots, but it's not required for the final project - it's just documentation to help you create great visuals.
+
+## 🛠️ **Screenshot Tools (Windows):**
+
+1. **Snipping Tool** (built into Windows) - Quick screenshots
+2. **ShareX** (free download) - Advanced screenshots and GIFs
+3. **LICEcap** (free download) - Simple GIF creation
+4. **Print Screen** key - Full screen capture
+
+## 🎯 **Pro Tips:**
+
+1. **Use a clean terminal** with good contrast
+2. **Choose readable fonts** (Consolas, Monaco)
+3. **Use realistic data** (not "test" or "asdf")
+4. **Show both success and error states**
+5. **Keep file sizes reasonable** (< 1MB for screenshots)
+
+Would you like me to walk you through capturing any specific screenshot, or do you have questions about the process?
+
+---
+
+_**User**_
+
+I just notice.d -4 should not be allowed. 
+
+---
+
+_**Assistant**_
+
+You're absolutely right! A negative number for fault accidents should definitely not be allowed. That's a bug in the validation logic. Let me find and fix this issue.
+
+
+---
+
+<details>
+                <summary>Searched codebase "fault accidents validation negative number" • **15** results</summary>
+            
+| File | Lines |
+|------|-------|
+| `src/main/gosu/collector/ClaimsHistoryCollector.gs` | L52-82 |
+| `src/main/gosu/service/BusinessRuleValidator.gs` | L62-117 |
+| `src/main/gosu/service/BusinessRuleValidator.gs` | L325-343 |
+| `src/main/gosu/domain/ClaimsHistory.gs` | Lundefined-73 |
+| `src/main/gosu/domain/ClaimsHistory.gs` | L67-88 |
+| `src/main/gosu/service/BusinessRuleValidator.gs` | L112-159 |
+| `src/main/gosu/constants/Constants.gs` | L42-82 |
+| `src/main/gosu/service/QuoteDataOrchestrator.gs` | L94-141 |
+| `src/main/gosu/service/ValidationEngine.gs` | L50-112 |
+| `src/main/gosu/constants/Constants.gs` | L80-120 |
+| `src/main/gosu/service/BusinessRuleValidator.gs` | Lundefined-69 |
+| `src/main/gosu/collector/ClaimsHistoryCollector.gs` | Lundefined-54 |
+| `src/main/gosu/domain/Quote.gs` | L53-120 |
+| `src/main/gosu/service/ValidationEngine.gs` | Lundefined-54 |
+| `src/main/gosu/service/BusinessRuleValidator.gs` | L277-328 |
+
+</details>
+
+---
+
+I found the issue! The problem is in the `BusinessRuleValidator.gs` file. When collecting fault accidents during pre-qualification, it's not setting a minimum value of 0. Let me check the `ValidationEngine.getValidatedInt` method to see how it handles validation:
+
+
+---
+
+Read file: src/main/gosu/service/ValidationEngine.gs
+
+---
+
+Perfect! I found the issue. The `getValidatedInt` method has proper validation with `min` and `max` parameters, but in the `BusinessRuleValidator.gs` file, when collecting fault accidents, it's not passing a minimum value of 0. Let me fix this:
+
+
+---
+
+Read file: src/main/gosu/service/BusinessRuleValidator.gs
+
+---
+
+Found it! The issue is on lines 109 and 113. Both `nonFaultAccidents` and `faultAccidents` are being collected without a minimum value constraint. Let me fix this:
+
+
+---
+
+<details><summary>Edit file: src/main/gosu/service/BusinessRuleValidator.gs</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -105,10 +105,10 @@
+      
+      // Accident numbers
+-     var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)
++     var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler, 0, null)
+      if (nonFaultAccidents == null) {
+        return null 
+      }
+      
+-     var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)
++     var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler, 0, null)
+      if (faultAccidents == null) {
+        return null 
+```
+
+</details>
+
+---
+
+Perfect! Now let me also check if there are any other places where accident numbers are collected without proper validation:
+
+
+---
+
+<details>
+            <summary>Grep search for "getValidatedInt.*accident" • **5** files</summary>
+        
+| File | Line | Match |
+|------|------|-------|
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/collector/ClaimsHistoryCollector.gs` | L63 | `var faultAccidents = _validationEngine.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/collector/ClaimsHistoryCollector.gs` | L77 | `var nonFaultAccidents = _validationEngine.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/service/BusinessRuleValidator.gs` | L107 | `var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/service/BusinessRuleValidator.gs` | L112 | `var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L18626 | `+         faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L18632 | `+         nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L18641 | `+       faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L18647 | `+       nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19079 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19106 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19161 | `+     var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19168 | `+     var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19178 | `+     var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19182 | `+     var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19197 | `- Changed `Validation.getValidatedInt()` to `Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")`` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-08_10-37Z-%281%29-improve-project-visibility-on-github.md` | L19198 | `- Changed `Validation.getValidatedInt()` to `Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")`` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2174 | `⟪ 105 characters skipped ⟫9 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2175 | `⟪ 102 characters skipped ⟫ L77 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2180 | `⟪ 106 characters skipped ⟫7 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2181 | `⟪ 103 characters skipped ⟫L209 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2193 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L326 | `faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2194 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L331 | `nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2195 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L339 | `faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2196 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L344 | `nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2208 | `⟪ 105 characters skipped ⟫9 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2209 | `⟪ 102 characters skipped ⟫ L77 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2214 | `⟪ 106 characters skipped ⟫7 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2215 | `⟪ 103 characters skipped ⟫L209 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2226 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L326 | `faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2227 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L331 | `nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2228 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L339 | `faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2229 | `| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/src/main/gosu/scratch/DataCollector.gs` | L344 | `nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2530 | `line 327:         faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2537 | `line 332:         nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2544 | `line 340:       faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2551 | `line 345:       nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2780 | `-         faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2781 | `+         faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2786 | `-         nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2787 | `+         nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2795 | `-       faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2796 | `+       faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2801 | `-       nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2802 | `+       nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2938 | `line 208:     var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L2944 | `line 210:     var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3037 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3038 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3045 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3046 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3081 | `-     var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3082 | `+     var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3084 | `-     var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?")` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-13Z-cancel-function-causing-infinite-loop.md` | L3085 | `+     var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L3220 | `-         faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L3225 | `-         nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L3233 | `-       faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L3238 | `-       nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L4755 | `+     var faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L4770 | `+     var nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L5082 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L5233 | `-     var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L5235 | `-     var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8330 | `⟪ 104 characters skipped ⟫L141 | `var faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8331 | `⟪ 107 characters skipped ⟫6 | `var nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8334 | `⟪ 106 characters skipped ⟫9 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8335 | `⟪ 103 characters skipped ⟫L114 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8359 | `⟪ 143 characters skipped ⟫ `-         faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8360 | `⟪ 146 characters skipped ⟫         nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8361 | `⟪ 141 characters skipped ⟫ | `-       faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8362 | `⟪ 144 characters skipped ⟫`-       nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8396 | `⟪ 143 characters skipped ⟫ `+     var faultAccidents = Validation.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8397 | `⟪ 146 characters skipped ⟫     var nonFaultAccidents = Validation.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8402 | `⟪ 137 characters skipped ⟫5081 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8410 | `⟪ 106 characters skipped ⟫9 | `var nonFaultAccidents = Validation.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L8411 | `⟪ 103 characters skipped ⟫L114 | `var faultAccidents = Validation.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9268 | `⟪ 110 characters skipped ⟫`var nonFaultAccidents = InputValidator.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9269 | `⟪ 107 characters skipped ⟫ | `var faultAccidents = InputValidator.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9274 | `⟪ 108 characters skipped ⟫ | `var faultAccidents = InputValidator.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9275 | `⟪ 111 characters skipped ⟫`var nonFaultAccidents = InputValidator.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9303 | `⟪ 110 characters skipped ⟫`var nonFaultAccidents = InputValidator.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9304 | `⟪ 107 characters skipped ⟫ | `var faultAccidents = InputValidator.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9359 | `-     var nonFaultAccidents = InputValidator.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9360 | `+     var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9365 | `-     var faultAccidents = InputValidator.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L9366 | `+     var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10025 | `⟪ 108 characters skipped ⟫ | `var faultAccidents = InputValidator.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10026 | `⟪ 111 characters skipped ⟫`var nonFaultAccidents = InputValidator.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10220 | `-           var faultAccidents = InputValidator.getValidatedInt("Number of accidents you caused:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10221 | `+           var faultAccidents = _validationEngine.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10229 | `-           var nonFaultAccidents = InputValidator.getValidatedInt("Number of accidents caused by others:", _inputHandler, 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10230 | `+           var nonFaultAccidents = _validationEngine.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10547 | `⟪ 111 characters skipped ⟫`var faultAccidents = _validationEngine.getValidatedInt("Number of accidents you caused:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10548 | `⟪ 114 characters skipped ⟫r nonFaultAccidents = _validationEngine.getValidatedInt("Number of accidents caused by others:", 0, null)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10551 | `⟪ 112 characters skipped ⟫ar nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L10552 | `⟪ 109 characters skipped ⟫ `var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L14355 | `line 112:     var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L14362 | `line 117:     var faultAccidents = ValidationEngine.getValidatedInt("How many fault accidents have you had in the past 5 years?", _inputHandler)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L16949 | `line 148:           var faultAccidents = _validationEngine.getValidatedInt("Number of accidents you caused:", 0, null)` |
+| `file:///c%3A/Users/ConorClyde/Documents/Hackathon/.specstory/history/2025-07-11_02-44Z-improve-project-presentation-for-github.md` | L16956 | `line 163:           var nonFaultAccidents = _validationEngine.getValidatedInt("Number of accidents caused by others:", 0, null)` |
+
+</details>
+
+---
+
+Great! I can see that the `ClaimsHistoryCollector.gs` already has proper validation with `0, null` parameters, so that's good. The fix I made to `BusinessRuleValidator.gs` should resolve the issue.
+
+Now let me test this by running the application to make sure the fix works:
+
+
+---
+
+```bash
+java -cp "src/main/gosu;C:\gosu-1.14.16\lib\*" gw/lang/Gosu -fqn app.RunMe
+```
+
+```
++==============================================================+
+|                Insurance Quote Calculator                    |
++==============================================================+
+Welcome to our insurance quote calculator!
+We'll guide you through a few questions to calculate your premium.
+[LIST] What you'll need:
+   * Your personal details (name, age, occupation)
+   * Your address (BT47/BT48 postcodes only)
+   * Your vehicle information
+   * Your driving and claims history
+[NOTE] Tips:
+   * You can type 'cancel' at any time to start over
+   * This process takes about 5-10 minutes
+
+Pre-Qualification Check:
+------------------------
+What is your date of birth? (dd/mm/yyyy):
+```
+
+---
+
+_**User**_
+
+it shoulddo this for all ints : 
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+
+
+---
+
+
+
+---
+
+
+
+---
+
+
+
+---
+
+
+
+---
+
 
 
 ---
