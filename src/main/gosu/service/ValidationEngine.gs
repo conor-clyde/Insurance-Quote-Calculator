@@ -333,18 +333,32 @@ class ValidationEngine {
   }
 
   function validateAndConfirmClaimsHistory(claimsHistory: ClaimsHistory, retryFunction: block(): ClaimsHistory): ClaimsHistory {
-    var confirmResult = confirmData(
-      "claims history",
-      \-> print(claimsHistory.toString()),
-      retryFunction
-    )
-    if (confirmResult == null) {
-      return null 
+    print("")
+    print("Please confirm your claims history:")
+    print("  • Fault Accidents: ${claimsHistory.FaultAccidents}")
+    print("  • Non-Fault Accidents: ${claimsHistory.NonFaultAccidents}")
+    print("")
+    var confirm = ValidationEngine.getValidatedBoolean("Are these details correct? (Yes/No)", _inputHandler)
+    if (confirm == null) {
+      return null // User cancelled
     }
-    if (confirmResult) {
+    if (confirm) {
       return claimsHistory
     } else {
-      return null
+      print("")
+      print("Since these details were collected during pre-qualification, you'll need to restart from the beginning to change them.")
+      var restart = ValidationEngine.getValidatedBoolean("Would you like to restart from pre-qualification? (Yes/No)", _inputHandler)
+      if (restart == null) {
+        return null // User cancelled
+      }
+      if (restart) {
+        // Signal that user wants to restart from pre-qualification
+        _inputHandler.lastInputWasCancel = true
+        return null
+      } else {
+        // User chose not to restart, so we'll continue with current values
+        return claimsHistory
+      }
     }
   }
 

@@ -3,6 +3,7 @@ package collector
 uses service.ValidationEngine
 uses util.InputHandler
 uses domain.ClaimsHistory
+uses domain.PreQualResult
 uses constants.Constants
 
 /**
@@ -29,24 +30,30 @@ class ClaimsHistoryCollector {
   /**
    * Collects and validates claims history information.
    * 
-   * @param preQualFaultAccidents Fault accidents from pre-qualification
-   * @param preQualNonFaultAccidents Non-fault accidents from pre-qualification
+   * @param preQualResult Pre-qualification result containing claims history data
    * @return ClaimsHistory object if valid, null if cancelled
    */
-  function collectClaimsHistoryData(preQualFaultAccidents: int, preQualNonFaultAccidents: int): ClaimsHistory {
+  function collectClaimsHistoryData(preQualResult: PreQualResult): ClaimsHistory {
     
     print("Claims History:")
     print("--------------")
-    print("Please review your claims history for the past 5 years.")
+    print("Please review your claims history for the past 5 years from pre-qualification.")
     print("[NOTE] You can type 'cancel' at any time to start over")
 
     var claimsHistory = new ClaimsHistory()
 
     // Use pre-qualification data instead of asking again
-    claimsHistory.FaultAccidents = preQualFaultAccidents
-    claimsHistory.NonFaultAccidents = preQualNonFaultAccidents
+    claimsHistory.FaultAccidents = preQualResult.FaultAccidents
+    claimsHistory.NonFaultAccidents = preQualResult.NonFaultAccidents
 
-    return _validationEngine.validateAndConfirmClaimsHistory(claimsHistory, \-> collectClaimsHistoryData(preQualFaultAccidents, preQualNonFaultAccidents))
+    // Display the data clearly
+    print("")
+    print("Your claims history details:")
+    print("  • Fault Accidents: ${preQualResult.FaultAccidents}")
+    print("  • Non-Fault Accidents: ${preQualResult.NonFaultAccidents}")
+    print("")
+
+    return _validationEngine.validateAndConfirmClaimsHistory(claimsHistory, \-> collectClaimsHistoryData(preQualResult))
   }
 
   // ============================================================================

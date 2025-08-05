@@ -91,7 +91,7 @@ class QuoteFlowController {
       }
 
       // Step 5: Driving History Collection
-      var drivingHistory = _dataOrchestrator.collectDrivingHistoryData(preQualResult.PenaltyPoints, preQualResult.NonMotorConvictions)
+      var drivingHistory = _dataOrchestrator.collectDrivingHistoryData(preQualResult)
       if (drivingHistory == null) {
         if (_inputHandler.lastInputWasCancel) {
           return new QuoteResult(null, true, false, "User cancelled during driving history collection")
@@ -100,7 +100,7 @@ class QuoteFlowController {
       }
 
       // Step 6: Claims History Collection
-      var claimsHistory = _dataOrchestrator.collectClaimsHistoryData(preQualResult.FaultAccidents, preQualResult.NonFaultAccidents)
+      var claimsHistory = _dataOrchestrator.collectClaimsHistoryData(preQualResult)
       if (claimsHistory == null) {
         if (_inputHandler.lastInputWasCancel) {
           return new QuoteResult(null, true, false, "User cancelled during claims history collection")
@@ -164,7 +164,6 @@ class QuoteFlowController {
     var discountedPremium = basePremium - (basePremium * quote.Discounts)
     var penalizedPremium = discountedPremium + (basePremium * quote.Penalties)
     var iptAmount = penalizedPremium * Constants.IPT
-    var totalPremium = quote.TotalPremium
     
     var details =
       "+==============================================================+\n" +
@@ -184,7 +183,7 @@ class QuoteFlowController {
     details +=
       "   Subtotal (before IPT): GBP ${Math.round(penalizedPremium)}\n" +
       "   Insurance Premium Tax (12%): +GBP ${Math.round(iptAmount)}\n" +
-      "   = Total Premium: GBP ${Math.round(totalPremium)}\n"
+      "   = Total Premium: GBP ${Math.round(quote.TotalPremium)}\n"
 
     print(details)
     

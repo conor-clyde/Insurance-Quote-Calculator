@@ -11,6 +11,7 @@ uses domain.Address
 uses domain.Vehicle
 uses domain.DrivingHistory
 uses domain.ClaimsHistory
+uses domain.PreQualResult
 uses constants.Constants
 uses java.time.LocalDate
 
@@ -75,23 +76,21 @@ class QuoteDataOrchestrator {
   /**
    * Collects all driving history information including penalty points and convictions.
    * 
-   * @param preQualPenaltyPoints Penalty points from pre-qualification
-   * @param preQualNonMotorConvictions Non-motor convictions from pre-qualification
+   * @param preQualResult Pre-qualification result containing driving history data
    * @return DrivingHistory object if valid, null if cancelled
    */
-  function collectDrivingHistoryData(preQualPenaltyPoints: int, preQualNonMotorConvictions: int): DrivingHistory {
-    return _drivingHistoryCollector.collectDrivingHistoryData(preQualPenaltyPoints, preQualNonMotorConvictions)
+  function collectDrivingHistoryData(preQualResult: PreQualResult): DrivingHistory {
+    return _drivingHistoryCollector.collectDrivingHistoryData(preQualResult)
   }
 
   /**
    * Collects all claims history information including accident details.
    * 
-   * @param preQualFaultAccidents Fault accidents from pre-qualification
-   * @param preQualNonFaultAccidents Non-fault accidents from pre-qualification
+   * @param preQualResult Pre-qualification result containing claims history data
    * @return ClaimsHistory object if valid, null if cancelled
    */
-  function collectClaimsHistoryData(preQualFaultAccidents: int, preQualNonFaultAccidents: int): ClaimsHistory {
-    return _claimsHistoryCollector.collectClaimsHistoryData(preQualFaultAccidents, preQualNonFaultAccidents)
+  function collectClaimsHistoryData(preQualResult: PreQualResult): ClaimsHistory {
+    return _claimsHistoryCollector.collectClaimsHistoryData(preQualResult)
   }
   
   /**

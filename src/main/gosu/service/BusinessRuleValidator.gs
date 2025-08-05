@@ -59,49 +59,26 @@ class BusinessRuleValidator {
     
     print("Pre-qualification passed! Proceeding to quote calculation...")
     print("")
-    return new PreQualResult(dob, occupation, postcode, riskData.faultAccidents, riskData.nonFaultAccidents, riskData.penaltyPoints, riskData.nonMotorConvictions)
-  }
-
-  /**
-   * Risk assessment data structure for better organization.
-   */
-  class RiskAssessmentData {
-    var hasManyPenaltyPoints: boolean
-    var hasNonMotorConvictions: boolean
-    var penaltyPoints: int
-    var nonMotorConvictions: int
-    var nonFaultAccidents: int
-    var faultAccidents: int
-    
-    construct(manyPenaltyPoints: boolean, hasConvictions: boolean, penaltyPointsCount: int, convictionsCount: int, nonFault: int, fault: int) {
-      this.hasManyPenaltyPoints = manyPenaltyPoints
-      this.hasNonMotorConvictions = hasConvictions
-      this.penaltyPoints = penaltyPointsCount
-      this.nonMotorConvictions = convictionsCount
-      this.nonFaultAccidents = nonFault
-      this.faultAccidents = fault
-    }
+    return new PreQualResult(dob, occupation, postcode, riskData.get("faultAccidents"), riskData.get("nonFaultAccidents"), riskData.get("penaltyPoints"), riskData.get("nonMotorConvictions"))
   }
 
   /**
    * Collects all risk assessment data in one place.
    * 
-   * @return RiskAssessmentData object or null if cancelled
+   * @return Map with risk data or null if cancelled
    */
-  private function collectRiskAssessmentData(): RiskAssessmentData {
+  private function collectRiskAssessmentData(): Map<String, Integer> {
     // Penalty points - ask for actual count
     var penaltyPoints = ValidationEngine.getValidatedInt("How many penalty points do you have on your licence?", _inputHandler, 0, null)
     if (penaltyPoints == null) {
       return null 
     }
-    var hasManyPenaltyPoints = penaltyPoints > Constants.MAX_PENALTY_POINTS
     
     // Non-motoring convictions - ask for actual count
     var nonMotorConvictions = ValidationEngine.getValidatedInt("How many non-motoring convictions do you have in the past 5 years?", _inputHandler, 0, null)
     if (nonMotorConvictions == null) {
       return null 
     }
-    var hasNonMotorConvictions = nonMotorConvictions > 0
     
     // Accident numbers
     var nonFaultAccidents = ValidationEngine.getValidatedInt("How many non-fault accidents have you had in the past 5 years?", _inputHandler, 0, null)
@@ -114,36 +91,41 @@ class BusinessRuleValidator {
       return null 
     }
     
-    return new RiskAssessmentData(hasManyPenaltyPoints, hasNonMotorConvictions, penaltyPoints, nonMotorConvictions, nonFaultAccidents, faultAccidents)
+    return {
+      "penaltyPoints" -> penaltyPoints,
+      "nonMotorConvictions" -> nonMotorConvictions,
+      "nonFaultAccidents" -> nonFaultAccidents,
+      "faultAccidents" -> faultAccidents
+    }
   }
 
   /**
    * Validates risk assessment data against business rules.
    * 
-   * @param riskData RiskAssessmentData to validate
+   * @param riskData Map containing risk assessment data
    * @return Boolean indicating if risk assessment passes
    */
-  private function validateRiskAssessment(riskData: RiskAssessmentData): boolean {
+  private function validateRiskAssessment(riskData: Map<String, Integer>): boolean {
     // Check penalty points
-    if (riskData.hasManyPenaltyPoints) {
+    if (riskData.get("penaltyPoints") > Constants.MAX_PENALTY_POINTS) {
       print("Sorry, you have too many penalty points to qualify.")
       return false
     }
     
     // Check non-motoring convictions
-    if (riskData.hasNonMotorConvictions) {
+    if (riskData.get("nonMotorConvictions") > 0) {
       print("Sorry, non-motoring convictions make you ineligible for quotes.")
       return false
     }
     
     // Check non-fault accidents
-    if (riskData.nonFaultAccidents > Constants.MAX_NON_FAULT_ACCIDENTS) {
+    if (riskData.get("nonFaultAccidents") > Constants.MAX_NON_FAULT_ACCIDENTS) {
       print("Sorry, you have too many non-fault accidents to qualify.")
       return false
     }
     
     // Check fault accidents
-    if (riskData.faultAccidents >= Constants.DECLINE_FAULT_ACCIDENTS) {
+    if (riskData.get("faultAccidents") >= Constants.DECLINE_FAULT_ACCIDENTS) {
       print("Sorry, you have too many fault accidents to qualify.")
       return false
     }

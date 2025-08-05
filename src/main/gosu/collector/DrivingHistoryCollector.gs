@@ -3,6 +3,7 @@ package collector
 uses service.ValidationEngine
 uses util.InputHandler
 uses domain.DrivingHistory
+uses domain.PreQualResult
 uses constants.Constants
 
 /**
@@ -29,23 +30,29 @@ class DrivingHistoryCollector {
   /**
    * Collects and validates driving history information.
    * 
-   * @param preQualPenaltyPoints Penalty points from pre-qualification
-   * @param preQualNonMotorConvictions Non-motor convictions from pre-qualification
+   * @param preQualResult Pre-qualification result containing driving history data
    * @return DrivingHistory object if valid, null if cancelled
    */
-  function collectDrivingHistoryData(preQualPenaltyPoints: int, preQualNonMotorConvictions: int): DrivingHistory {
+  function collectDrivingHistoryData(preQualResult: PreQualResult): DrivingHistory {
     
     print("Driving History:")
     print("---------------")
-    print("Please review your driving history details.")
+    print("Please review your driving history details from pre-qualification.")
     print("[NOTE] You can type 'cancel' at any time to start over")
 
     var drivingHistory = new DrivingHistory()
 
     // Use pre-qualification data
-    drivingHistory.PenaltyPoints = preQualPenaltyPoints
-    drivingHistory.NonMotorConvictions = preQualNonMotorConvictions
+    drivingHistory.PenaltyPoints = preQualResult.PenaltyPoints
+    drivingHistory.NonMotorConvictions = preQualResult.NonMotorConvictions
 
-    return _validationEngine.validateAndConfirmDrivingHistory(drivingHistory, \-> collectDrivingHistoryData(preQualPenaltyPoints, preQualNonMotorConvictions))
+    // Display the data clearly
+    print("")
+    print("Your driving history details:")
+    print("  • Penalty Points: ${preQualResult.PenaltyPoints}")
+    print("  • Non-Motor Convictions: ${preQualResult.NonMotorConvictions}")
+    print("")
+
+    return _validationEngine.validateAndConfirmDrivingHistory(drivingHistory, \-> collectDrivingHistoryData(preQualResult))
   }
 } 
