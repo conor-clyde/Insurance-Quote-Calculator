@@ -11,29 +11,27 @@
 
 ### **Application Flow Demo**
 ![Application Demo](docs/images/app-demo.gif)
-
 *Complete walkthrough of the insurance quote calculation process*
 
 ### **Key Screenshots**
 
 #### **Pre-Qualification Check**
-![Pre-Qualification](docs/images/pre-qualification.png)
-
+<img src="docs/images/pre-qualification.png" width="1000" alt="Pre-Qualification">
 *Initial eligibility assessment with age, occupation, and risk validation*
 
 #### **Data Collection Process**
-![Data Collection - Customer Information](docs/images/data-collection1.png)
+<img src="docs/images/data-collection1.png" width="1000" alt="Data Collection - Customer Information">
 *Customer information collection with validation examples*
 
-![Data Collection - Vehicle Information](docs/images/data-collection2.png)
+<img src="docs/images/data-collection2.png" width="1000" alt="Data Collection - Vehicle Information">
 *Vehicle selection and configuration with bounds validation*
 
 #### **Quote Calculation Results**
-![Quote Results](docs/images/quote-results.png)
+<img src="docs/images/quote-results.png" width="1000" alt="Quote Results">
 *Detailed premium breakdown with discounts, penalties, and tax calculations*
 
 ### **Project Structure Overview**
-![Project Structure](docs/images/project-structure.png)
+<img src="docs/images/project-structure.png" width="1000" alt="Project Structure">
 *Clean, modular architecture with separation of concerns*
 
 ---
