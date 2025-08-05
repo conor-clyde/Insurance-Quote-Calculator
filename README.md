@@ -20,8 +20,11 @@
 *Initial eligibility assessment with age, occupation, and risk validation*
 
 #### **Data Collection Process**
-![Data Collection](docs/images/data-collection.png)
-*Structured information gathering with real-time validation*
+![Data Collection - Customer Information](docs/images/data-collection1.png)
+*Customer information collection with validation examples*
+
+![Data Collection - Vehicle Information](docs/images/data-collection2.png)
+*Vehicle selection and configuration with bounds validation*
 
 #### **Quote Calculation Results**
 ![Quote Results](docs/images/quote-results.png)
