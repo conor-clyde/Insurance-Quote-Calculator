@@ -1,5 +1,4 @@
 # 🚗 Insurance Quote Calculator
-## :information_source: Project Overview
 [![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
 [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
