@@ -1,11 +1,10 @@
 # 🚗 Insurance Quote Calculator
-
-> **A comprehensive, interactive insurance quote calculator built in Gosu with real-world business rules, risk assessment, and premium calculation.**
-
 [![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
 [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
+
+> An insurance quote calculator that demonstrates business logic implementation, comprehensive data validation and professional software architecture. Built as a learning project to understand the Gosu programming language while implementing real-world insurance industry rules and calculations.
 
 ## 🎬 Demo & Screenshots
 
@@ -35,10 +34,6 @@
 *Clean, modular architecture with separation of concerns*
 
 ---
-
-## 🏆 Project Overview
-
-An insurance quote calculator that demonstrates business logic implementation, comprehensive data validation and professional software architecture. Built as a learning project to understand the Gosu programming language while implementing real-world insurance industry rules and calculations.
 
 ## 🚀 Quick Start
 
