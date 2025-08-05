@@ -4,8 +4,6 @@ uses util.InputHandler
 uses collector.CustomerCollector
 uses collector.AddressCollector
 uses collector.VehicleCollector
-uses collector.DrivingHistoryCollector
-uses collector.ClaimsHistoryCollector
 uses domain.Customer
 uses domain.Address
 uses domain.Vehicle
@@ -26,8 +24,6 @@ class QuoteDataOrchestrator {
   private var _customerCollector: CustomerCollector
   private var _addressCollector: AddressCollector
   private var _vehicleCollector: VehicleCollector
-  private var _drivingHistoryCollector: DrivingHistoryCollector
-  private var _claimsHistoryCollector: ClaimsHistoryCollector
 
   /**
    * Constructs a QuoteDataOrchestrator with the given InputHandler.
@@ -39,8 +35,6 @@ class QuoteDataOrchestrator {
     _customerCollector = new CustomerCollector(inputHandler)
     _addressCollector = new AddressCollector(inputHandler)
     _vehicleCollector = new VehicleCollector(inputHandler)
-    _drivingHistoryCollector = new DrivingHistoryCollector(inputHandler)
-    _claimsHistoryCollector = new ClaimsHistoryCollector(inputHandler)
   }
   
   /**
@@ -73,25 +67,7 @@ class QuoteDataOrchestrator {
     return _vehicleCollector.collectVehicleData()
   }
 
-  /**
-   * Collects all driving history information including penalty points and convictions.
-   * 
-   * @param preQualResult Pre-qualification result containing driving history data
-   * @return DrivingHistory object if valid, null if cancelled
-   */
-  function collectDrivingHistoryData(preQualResult: PreQualResult): DrivingHistory {
-    return _drivingHistoryCollector.collectDrivingHistoryData(preQualResult)
-  }
 
-  /**
-   * Collects all claims history information including accident details.
-   * 
-   * @param preQualResult Pre-qualification result containing claims history data
-   * @return ClaimsHistory object if valid, null if cancelled
-   */
-  function collectClaimsHistoryData(preQualResult: PreQualResult): ClaimsHistory {
-    return _claimsHistoryCollector.collectClaimsHistoryData(preQualResult)
-  }
   
   /**
    * Validates that all collected data is complete and consistent.

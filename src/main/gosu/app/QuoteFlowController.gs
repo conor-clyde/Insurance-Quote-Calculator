@@ -90,31 +90,22 @@ class QuoteFlowController {
         return new QuoteResult(null, false, true, "Vehicle data collection failed")
       }
 
-      // Step 5: Driving History Collection
-      var drivingHistory = _dataOrchestrator.collectDrivingHistoryData(preQualResult)
-      if (drivingHistory == null) {
-        if (_inputHandler.lastInputWasCancel) {
-          return new QuoteResult(null, true, false, "User cancelled during driving history collection")
-        }
-        return new QuoteResult(null, false, true, "Driving history collection failed")
-      }
+      // Step 5: Create DrivingHistory and ClaimsHistory from pre-qualification data
+      var drivingHistory = new DrivingHistory()
+      drivingHistory.PenaltyPoints = preQualResult.PenaltyPoints
+      drivingHistory.NonMotorConvictions = preQualResult.NonMotorConvictions
 
-      // Step 6: Claims History Collection
-      var claimsHistory = _dataOrchestrator.collectClaimsHistoryData(preQualResult)
-      if (claimsHistory == null) {
-        if (_inputHandler.lastInputWasCancel) {
-          return new QuoteResult(null, true, false, "User cancelled during claims history collection")
-        }
-        return new QuoteResult(null, false, true, "Claims history collection failed")
-      }
+      var claimsHistory = new ClaimsHistory()
+      claimsHistory.FaultAccidents = preQualResult.FaultAccidents
+      claimsHistory.NonFaultAccidents = preQualResult.NonFaultAccidents
 
-      // Step 7: Information Summary and Confirmation
+      // Step 6: Information Summary and Confirmation
       var confirmed = displayInformationSummaryAndConfirm(customer, address, vehicle, drivingHistory, claimsHistory)
       if (!confirmed) {
         return new QuoteResult(null, true, false, "User cancelled during information confirmation")
       }
 
-      // Step 8: Quote Calculation
+      // Step 7: Quote Calculation
       var quote = new Quote(customer, address, drivingHistory, claimsHistory, vehicle)
       var calculationSuccess = quote.calcPremium()
       
@@ -283,9 +274,11 @@ class QuoteFlowController {
    * @param customer Customer information
    * @param address Address information
    * @param vehicle Vehicle information
+   * @param drivingHistory Driving history information
+   * @param claimsHistory Claims history information
    * @return Boolean indicating if user confirms the information
    */
-  function displayInformationSummary(customer: Customer, address: Address, vehicle: Vehicle): Boolean {
+  function displayInformationSummaryAndConfirm(customer: Customer, address: Address, vehicle: Vehicle, drivingHistory: DrivingHistory, claimsHistory: ClaimsHistory): Boolean {
     var msg =
       "+==============================================================+\n" +
       "|                    Information Summary                       |\n" +
@@ -304,7 +297,12 @@ class QuoteFlowController {
       "   Year: ${vehicle.Year}\n" +
       "   Registration: ${vehicle.Reg}\n" +
       "   Value: GBP ${vehicle.Value}\n" +
-      "   Has Tracker: ${vehicle.HasTracker ? "Yes" : "No"}\n"
+      "   Has Tracker: ${vehicle.HasTracker ? "Yes" : "No"}\n" +
+      "[RISK] Risk Assessment (from pre-qualification):\n" +
+      "   Penalty Points: ${drivingHistory.PenaltyPoints}\n" +
+      "   Non-Motor Convictions: ${drivingHistory.NonMotorConvictions}\n" +
+      "   Fault Accidents: ${claimsHistory.FaultAccidents}\n" +
+      "   Non-Fault Accidents: ${claimsHistory.NonFaultAccidents}\n"
     print(msg)
     return _inputHandler.askConfirmation("Please review the information above. Is everything correct?")
   }

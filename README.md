@@ -111,6 +111,12 @@ src/main/gosu/
 - `QuoteDataOrchestrator` coordinates data collection across multiple collectors
 - `PreQualResult` serves as single source of truth for all risk assessment data
 
+### **Optimized Data Flow**
+- **Pre-Qualification** - Collects all risk assessment data (penalty points, convictions, accidents)
+- **Streamlined Collection** - Customer, address, and vehicle data without redundancy
+- **Single Source of Truth** - Risk data flows from pre-qualification to final quote
+- **Eliminated Duplication** - No separate driving/claims history collection steps
+
 ## 💼 Business Rules & Features
 
 ### **Pre-Qualification Checks**
@@ -205,7 +211,7 @@ src/main/gosu/
 6. **Final Polish** - Documentation and code cleanup
 
 ### **Recent Optimizations (Latest)**
-- **Simplified Data Architecture** - Eliminated redundant RiskAssessmentData class
+- **Streamlined Data Collection** - Eliminated redundant RiskAssessmentData class and removed duplicate driving/claims history collection steps
 - **Single Source of Truth** - PreQualResult serves as central data store
 - **Minimal Variable Usage** - Reduced from 25+ to ~15 essential variables
 - **Streamlined Validation** - Direct integer comparisons instead of boolean flags
@@ -219,7 +225,7 @@ src/main/gosu/
 - ✅ **Better Architecture** - Clean separation of concerns
 - ✅ **Comprehensive Validation** - Robust business rule enforcement
 - ✅ **Optimized Data Flow** - Single source of truth with PreQualResult
-- ✅ **Reduced Complexity** - Eliminated redundant RiskAssessmentData class
+- ✅ **Reduced Complexity** - Eliminated redundant RiskAssessmentData class and streamlined data collection flow
 - ✅ **Minimal Variables** - Streamlined data structures for better performance
 - ✅ **Accurate Calculations** - Fixed premium calculation display logic
 
