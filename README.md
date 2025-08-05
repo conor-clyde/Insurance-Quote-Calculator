@@ -38,17 +38,17 @@
 
 ## 🏆 Project Overview
 
-A sophisticated insurance quote calculator that demonstrates advanced business logic implementation, comprehensive data validation, and professional software architecture. Built as a learning project to master the Gosu programming language while implementing real-world insurance industry rules and calculations.
+An insurance quote calculator that demonstrates business logic implementation, comprehensive data validation and professional software architecture. Built as a learning project to understand the Gosu programming language while implementing real-world insurance industry rules and calculations.
 
 ### ✨ Key Features
 
-- **🎯 Complete Insurance Workflow** - End-to-end quote calculation with comprehensive data collection
-- **⚖️ Advanced Business Rules** - Real-world insurance validation and risk assessment
-- **🏗️ Professional Architecture** - Clean, modular design with separation of concerns
-- **🛡️ Robust Error Handling** - Graceful error recovery and user-friendly feedback
-- **✅ Comprehensive Validation** - Input validation, business rule enforcement, and data integrity
-- **💰 Premium Calculation** - Sophisticated pricing with discounts, penalties, and tax calculations
-- **🔄 User Experience** - Intuitive flow with confirmation steps and restart options
+- **Complete Insurance Workflow** - End-to-end quote calculation with comprehensive data collection
+- **Advanced Business Rules** - Real-world insurance validation and risk assessment
+- **Professional Architecture** - Clean, modular design with separation of concerns
+- **Robust Error Handling** - Graceful error recovery and user-friendly feedback
+- **Comprehensive Validation** - Input validation, business rule enforcement, and data integrity
+- **Premium Calculation** - Pricing with discounts, penalties, and tax calculations
+- **User Experience** - Intuitive flow with confirmation steps and restart options
 
 ## 🚀 Quick Start
 
@@ -65,16 +65,14 @@ A sophisticated insurance quote calculator that demonstrates advanced business l
    cd Insurance-Quote-Calculator
    ```
 
-2. **Set up Gosu environment**
-   ```bash
-   # Add Gosu to your PATH
-   export PATH=$PATH:/path/to/gosu-1.14.16/bin
-   ```
+2. **Open in Gosu IDE**
+   - Launch **Gosu IDE**
+   - Go to **File → Open Project**
+   - Navigate to the cloned `Insurance-Quote-Calculator` folder
+   - Select the `Hackathon.prj` file and click **Open**
 
 3. **Run the application**
-   ```bash
-   java -cp "src/main/gosu;path/to/gosu-libs/*" gw/lang/Gosu -fqn app.RunMe
-   ```
+   - In Gosu IDE, use the **Run** button in the toolbar
 
 ## 📁 Project Structure
 
