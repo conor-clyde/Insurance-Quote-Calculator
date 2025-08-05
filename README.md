@@ -40,16 +40,6 @@
 
 An insurance quote calculator that demonstrates business logic implementation, comprehensive data validation and professional software architecture. Built as a learning project to understand the Gosu programming language while implementing real-world insurance industry rules and calculations.
 
-### ✨ Key Features
-
-- **Complete Insurance Workflow** - End-to-end quote calculation with comprehensive data collection
-- **Advanced Business Rules** - Real-world insurance validation and risk assessment
-- **Professional Architecture** - Clean, modular design with separation of concerns
-- **Robust Error Handling** - Graceful error recovery and user-friendly feedback
-- **Comprehensive Validation** - Input validation, business rule enforcement, and data integrity
-- **Premium Calculation** - Pricing with discounts, penalties, and tax calculations
-- **User Experience** - Intuitive flow with confirmation steps and restart options
-
 ## 🚀 Quick Start
 
 ### Prerequisites
