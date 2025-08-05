@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
-> An insurance quote calculator that demonstrates business logic implementation, comprehensive data validation and professional software architecture. Built as a learning project to understand the Gosu programming language while implementing real-world insurance industry rules and calculations.
+Insurance quote calculator that demonstrates business logic implementation, data validation and professional software architecture. Built as a learning project to understand the Gosu programming language while implementing real-world insurance industry rules and calculations.
 
 ## 🎬 Demo & Screenshots
 
