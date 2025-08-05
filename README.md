@@ -2,7 +2,7 @@
 
 > **A comprehensive, interactive insurance quote calculator built in Gosu with real-world business rules, risk assessment, and premium calculation.**
 
-[![Gosu](https://img.shields.io/badge/Language-Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
+[![Language](https://img.shields.io/badge/Language-Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
 [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
