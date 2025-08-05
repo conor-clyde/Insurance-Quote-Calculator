@@ -307,43 +307,5 @@ class QuoteFlowController {
     return _inputHandler.askConfirmation("Please review the information above. Is everything correct?")
   }
 
-  /**
-   * Displays a summary of collected information for user confirmation and returns the confirmation status.
-   * 
-   * @param customer Customer information
-   * @param address Address information
-   * @param vehicle Vehicle information
-   * @param drivingHistory Driving history information
-   * @param claimsHistory Claims history information
-   * @return Boolean indicating if user confirms the information
-   */
-  function displayInformationSummaryAndConfirm(customer: Customer, address: Address, vehicle: Vehicle, drivingHistory: DrivingHistory, claimsHistory: ClaimsHistory): Boolean {
-    var msg =
-      "+==============================================================+\n" +
-      "|                    Information Summary                       |\n" +
-      "+==============================================================+\n" +
-      "[USER] Customer Information:\n" +
-      "   Name: ${customer.FirstName} ${customer.LastName}\n" +
-      "   Age: ${customer.Age} years\n" +
-      "   Occupation: ${customer.Occupation}\n" +
-      "   Driving Experience: ${customer.DrivingYears} years\n" +
-      "[HOUSE] Address Information:\n" +
-      "   Address: ${address.HouseNumber} ${address.Street}\n" +
-      "   Postcode: ${address.Postcode}\n" +
-      "[CAR] Vehicle Information:\n" +
-      "   Make: ${vehicle.Make}\n" +
-      "   Model: ${vehicle.Model}\n" +
-      "   Year: ${vehicle.Year}\n" +
-      "   Registration: ${vehicle.Reg}\n" +
-      "   Value: GBP ${vehicle.Value}\n" +
-      "   Has Tracker: ${vehicle.HasTracker ? "Yes" : "No"}\n" +
-      "[DRIVE] Driving History:\n" +
-      "   Penalty Points: ${drivingHistory.PenaltyPoints}\n" +
-      "   Non-Motor Convictions: ${drivingHistory.NonMotorConvictions}\n" +
-      "[CLAIMS] Claims History:\n" +
-      "   Fault Accidents: ${claimsHistory.FaultAccidents}\n" +
-      "   Non-Fault Accidents: ${claimsHistory.NonFaultAccidents}\n"
-    print(msg)
-    return _inputHandler.askConfirmation("Please review the information above. Is everything correct?")
-  }
+
 } 
