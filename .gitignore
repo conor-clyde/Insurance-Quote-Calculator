@@ -70,4 +70,9 @@ coverage/
 
 # Test reports
 test-results/
-reports/ 
+reports/
+
+# Development and IDE files
+.specstory/
+.cursorindexingignore
+*.cursorindexingignore 
