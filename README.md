@@ -46,14 +46,14 @@ Insurance quote calculator that demonstrates business logic implementation, data
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/conor-clyde/Insurance-Quote-Calculator.git
-   cd Insurance-Quote-Calculator
+   git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
+   cd Hackathon
    ```
 
 2. **Open in Gosu IDE**
    - Launch **Gosu IDE**
    - Go to **File → Open Project**
-   - Navigate to the cloned `Insurance-Quote-Calculator` folder
+   - Navigate to the cloned `Hackathon` folder
    - Select the `Hackathon.prj` file and click **Open**
 
 3. **Run the application**
