@@ -5,6 +5,7 @@
 [![Gosu](https://img.shields.io/badge/Language-Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
 [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
 ## 🎬 Demo & Screenshots
 
@@ -29,10 +30,6 @@
 #### **Quote Calculation Results**
 ![Quote Results](docs/images/quote-results.png)
 *Detailed premium breakdown with discounts, penalties, and tax calculations*
-
-#### **Error Handling & Validation**
-![Error Handling](docs/images/error-handling.png)
-*Graceful error recovery with clear, actionable feedback*
 
 ### **Project Structure Overview**
 ![Project Structure](docs/images/project-structure.png)
@@ -65,8 +62,8 @@ A sophisticated insurance quote calculator that demonstrates advanced business l
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/insurance-quote-calculator.git
-   cd insurance-quote-calculator
+   git clone https://github.com/conor-clyde/Insurance-Quote-Calculator.git
+   cd Insurance-Quote-Calculator
    ```
 
 2. **Set up Gosu environment**
