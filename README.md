@@ -69,9 +69,7 @@ src/main/gosu/
 │   └── RunMe.gsp                 # Application entry point
 ├── collector/                    # Data collection layer
 │   ├── AddressCollector.gs       # Address data collection
-│   ├── ClaimsHistoryCollector.gs # Claims history collection
 │   ├── CustomerCollector.gs      # Customer data collection
-│   ├── DrivingHistoryCollector.gs # Driving history collection
 │   └── VehicleCollector.gs       # Vehicle data collection
 ├── constants/                    # Configuration
 │   └── Constants.gs              # Business rules and constants
@@ -212,6 +210,7 @@ src/main/gosu/
 
 ### **Recent Optimizations (Latest)**
 - **Streamlined Data Collection** - Eliminated redundant RiskAssessmentData class and removed duplicate driving/claims history collection steps
+- **Code Cleanup** - Removed unused DrivingHistoryCollector and ClaimsHistoryCollector files
 - **Single Source of Truth** - PreQualResult serves as central data store
 - **Minimal Variable Usage** - Reduced from 25+ to ~15 essential variables
 - **Streamlined Validation** - Direct integer comparisons instead of boolean flags

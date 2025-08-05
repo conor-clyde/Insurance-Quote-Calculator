@@ -2,15 +2,14 @@
   "Title": "Gosu Experiment",
   "Version": 2,
   "Name": "Hackathon",
-  "ActiveTab": "src/main/gosu/collector/ClaimsHistoryCollector.gs",
+  "ActiveTab": "src/main/gosu/app/QuoteFlowController.gs",
   "Tabs": [
     "src/main/gosu/app/QuoteFlowController.gs",
     "src/main/gosu/service/ValidationEngine.gs",
     "src/main/gosu/domain/DrivingHistory.gs",
     "src/main/gosu/domain/Quote.gs",
     "src/main/gosu/service/QuoteDataOrchestrator.gs",
-    "src/main/gosu/service/BusinessRuleValidator.gs",
-    "src/main/gosu/collector/ClaimsHistoryCollector.gs"
+    "src/main/gosu/service/BusinessRuleValidator.gs"
   ],
   "SourcePath": [
     "src/main/gosu"
