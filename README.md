@@ -12,21 +12,23 @@ A **console-based insurance quote calculator** built with Gosu and Java. Impleme
 ![Application Demo](docs/images/demo-complete.gif)
 
 ### User Journey Screenshots
+*Complete walkthrough of the insurance quote process:*
 
 | Step | Screenshot | Description |
 |------|------------|-------------|
-| **1. Pre-Qualification** | <img src="docs/images/pre-qualification.png" width="320"> | Eligibility check: **age, occupation, risk factors** |
-| **2. Customer Info** | <img src="docs/images/data-collection1.png" width="320"> | Collects **personal details** |
-| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="320"> | Configure **vehicle details & options** |
-| **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="320"> | Review all collected data |
-| **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="320"> | Detailed **premium breakdown** |
+| **1. Pre-Qualification** | <img src="docs/images/pre-qualification.png" width="320" alt="Pre-qualification screen showing age, occupation, and risk factor inputs"> | Eligibility check: **age, occupation, risk factors** |
+| **2. Customer Info** | <img src="docs/images/data-collection1.png" width="320" alt="Customer information collection screen with personal details form"> | Collects **personal details** |
+| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="320" alt="Vehicle configuration screen with make, model, and options selection"> | Configure **vehicle details & options** |
+| **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="320" alt="Information summary screen showing all collected data for review"> | Review all collected data |
+| **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="320" alt="Quote results screen with detailed premium breakdown and calculations"> | Detailed **premium breakdown** |
 
 ### Validation and Error Handling
+*Comprehensive input validation and business rule enforcement:*
 
 | Feature | Screenshot | Description |
 |---------|------------|-------------|
-| Pre-Qualification Validation | <img src="docs/images/validation-pre-qual.png" width="480"> | Validates **dates, names, postcodes**, enforces eligibility rules |
-| Vehicle Configuration Validation | <img src="docs/images/validation-vehicle.png" width="480"> | Checks **ranges** and validates vehicle options |
+| Pre-Qualification Validation | <img src="docs/images/validation-pre-qual.png" width="480" alt="Pre-qualification validation screen showing error messages for invalid inputs"> | Validates **dates, names, postcodes**, enforces eligibility rules |
+| Vehicle Configuration Validation | <img src="docs/images/validation-vehicle.png" width="480" alt="Vehicle validation screen showing range validation and option selection errors"> | Checks **ranges** and validates vehicle options |
 
 ## 🚀 Quick Start
 
