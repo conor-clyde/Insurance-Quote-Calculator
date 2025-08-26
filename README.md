@@ -28,27 +28,6 @@ From pre-qualification to final premium calculation
 | **4. Information Summary & Confirmation**  | <img src="docs/images/information-summary.png" width="320"> | Review and confirm all **collected data & risk assessment**     |
 | **5. Quote Calculation & Results**         | <img src="docs/images/quote-results.png" width="320">       | Detailed **premium breakdown** with accurate calculations       |
 
-
-#### **1. Pre-Qualification & Risk Assessment**
-<img src="docs/images/pre-qualification.png" alt="Pre-Qualification" width="600"><br>
-*Comprehensive eligibility check with age, occupation, and risk validation*
-
-#### **2. Customer Information Collection**
-<img src="docs/images/data-collection1.png" alt="Customer Data Collection" width="600"><br>
-*Streamlined personal details collection with validation*
-
-#### **3. Vehicle Configuration**
-<img src="docs/images/data-collection2.png" alt="Vehicle Data Collection" width="600"><br>
-*Vehicle selection and configuration with enhanced validation*
-
-#### **4. Information Summary & Confirmation**
-<img src="docs/images/information-summary.png" alt="Information Summary" width="600"><br>
-*Complete data review with risk assessment from pre-qualification*
-
-#### **5. Quote Calculation & Results**
-<img src="docs/images/quote-results.png" alt="Quote Results" width="600"><br>
-*Detailed premium breakdown with accurate calculations*
-
 ### **Technical Features**
 
 #### **Validation & Error Handling**
