@@ -20,25 +20,21 @@ b
 From pre-qualification to final premium calculation
 
 ### **User Journey**
-| Step                                       | Screenshot                                                  | Description                                                     |
-| ------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------------------- |
-| **1. Pre-Qualification & Risk Assessment** | <img src="docs/images/pre-qualification.png" width="320">   | Eligibility check with **age, occupation, and risk validation** |
-| **2. Customer Information Collection**     | <img src="docs/images/data-collection1.png" width="320">    | Streamlined collection of **personal details** with validation  |
-| **3. Vehicle Configuration**               | <img src="docs/images/data-collection2.png" width="320">    | Configure **vehicle details and options** with validation       |
-| **4. Information Summary & Confirmation**  | <img src="docs/images/information-summary.png" width="320"> | Review and confirm all **collected data & risk assessment**     |
-| **5. Quote Calculation & Results**         | <img src="docs/images/quote-results.png" width="320">       | Detailed **premium breakdown** with accurate calculations       |
 
-### **Technical Features**
+| Step | Screenshot | Description |
+|------|------------|-------------|
+| **1. Pre-Qualification & Risk Assessment** | <img src="docs/images/pre-qualification.png" width="320"> | Eligibility check with **age, occupation, and risk validation** |
+| **2. Customer Information Collection** | <img src="docs/images/data-collection1.png" width="320"> | Streamlined collection of **personal details** with validation |
+| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="320"> | Configure **vehicle details and options** with validation |
+| **4. Information Summary & Confirmation** | <img src="docs/images/information-summary.png" width="320"> | Review and confirm all **collected data & risk assessment** |
+| **5. Quote Calculation & Results** | <img src="docs/images/quote-results.png" width="320"> | Detailed **premium breakdown** with accurate calculations |
 
 #### **Validation & Error Handling**
 
-**Pre-Qualification Validation**
-<img src="docs/images/validation-pre-qual.png" alt="Pre-Qualification Validation" width="600"><br>
-*Input format validation and business rule enforcement during pre-qualification*
-
-**Vehicle Configuration Validation**
-<img src="docs/images/validation-vehicle.png" alt="Vehicle Validation" width="600"><br>
-*Range validation and option selection validation for vehicle configuration*
+| Feature | Screenshot | Description |
+|---------|------------|-------------|
+| **Pre-Qualification Validation** | <img src="docs/images/validation-pre-qual.png" alt="Pre-Qualification Validation" width="480"> | *Validates input format (dates, names, postcodes) and enforces business rules during eligibility checks.* |
+| **Vehicle Configuration Validation** | <img src="docs/images/validation-vehicle.png" alt="Vehicle Validation" width="480"> | *Ensures correct ranges (e.g. penalty points, ages) and validates vehicle option selections.* |
 
 ---
 
