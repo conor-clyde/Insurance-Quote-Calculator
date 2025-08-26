@@ -1,4 +1,4 @@
-# 🚗 Insurance Quote Calculator
+\=# 🚗 Insurance Quote Calculator
 
 [![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/) [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/) [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
@@ -23,9 +23,9 @@ A **console-based insurance quote calculator** built with Gosu and Java. Impleme
 ## ✨ Features
 - ✅ Pre-qualification with **risk assessment**  
 - ✅ Customer, vehicle & address **data collection with validation**  
-- ✅ **Premium calculation** with discounts, surcharges & tax  
+- ✅ **Premium calculation**: Discounts, surcharges and tax  
 - ✅ **Clean architecture**: MVC, Strategy, Factory, Orchestrator  
-- ✅ Comprehensive **error handling** & user-friendly flow  
+- ✅ Comprehensive **error handling** and user-friendly flow  
 
 ---
 
@@ -47,7 +47,7 @@ A **console-based insurance quote calculator** built with Gosu and Java. Impleme
 | **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="320"> | Review all collected data |
 | **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="320"> | Detailed **premium breakdown** |
 
-#### Validation & Error Handling
+### Validation and Error Handling
 
 | Feature | Screenshot | Description |
 |---------|------------|-------------|
@@ -66,29 +66,27 @@ A **console-based insurance quote calculator** built with Gosu and Java. Impleme
 
 ### Run the Project
 ```bash
-git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
-cd Hackathon
-
-### Run the Project
 1. Clone the repo
 git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
 cd Hackathon
 
 2. Open in Gosu IDE
-# File → Open Project → Select Hackathon.prj
+File → Open Project → Select Hackathon.prj
 
 3. Run the app
-▶️ Run button or run RunMe.gsp
+Run RunMe.gsp
 ```
+
+---
 
 ## 📁 Project Structure
 
 ```
 src/main/gosu/
 ├── app/                          # Application layer
-│   ├── ApplicationController.gs  # Main orchestrator
-│   ├── QuoteFlowController.gs    # Quote workflow
-│   └── RunMe.gsp                 # Entry point
+│   ├── ApplicationController.gs  
+│   ├── QuoteFlowController.gs   
+│   └── RunMe.gsp                
 ├── collector/                    # Data collection
 │   ├── AddressCollector.gs       
 │   ├── CustomerCollector.gs    
@@ -111,6 +109,8 @@ src/main/gosu/
 └── util/                         # Utilities
     └── InputHandler.gs           
 ```
+
+---
 
 ## 🏗️ Architecture & Design Patterns
 - MVC → Domain entities (Model), Console UI (View), Controllers
