@@ -5,7 +5,7 @@
 [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
 A console-based insurance quote calculator built with Gosu. Implements real-world insurance business rules, validation, and clean architecture patterns — designed as a professional-grade learning project during a graduate program, and refined through continuous improvement.
-
+b
 ## ✨ Features
 - Pre-qualification with risk assessment
 - Customer, vehicle & address data collection with validation
