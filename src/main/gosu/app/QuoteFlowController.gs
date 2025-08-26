@@ -252,9 +252,7 @@ class QuoteFlowController {
    * @return Boolean indicating if user wants another quote, or null if cancelled
    */
   function askForAnotherQuote(): Boolean {
-    print("[RETRY] Would you like to get another quote? (Yes/No)")
-    print("[NOTE] This will start a completely new application.")
-    return _inputHandler.askBooleanQuestion("Another quote")
+    return _inputHandler.askBooleanQuestion("[RETRY] Would you like to get another quote? (Yes/No)")
   }
 
   /**

@@ -8,30 +8,45 @@ Insurance quote calculator that demonstrates business logic implementation, data
 
 ## 🎬 Demo & Screenshots
 
-### **Application Flow Demo**
-![Application Demo](docs/images/app-demo.gif)<br>
-*Complete walkthrough of the insurance quote calculation process*
+### **Complete Application Demo**
+![Application Demo](docs/images/demo-complete.gif)<br>
+*Full walkthrough of the optimized insurance quote calculation process*
 
-### **Key Screenshots**
+### **User Journey Screenshots**
 
-#### **Pre-Qualification Check**
-<img src="docs/images/pre-qualification.png" alt="Pre-Qualification"><br>
-*Initial eligibility assessment with age, occupation, and risk validation*
+#### **1. Pre-Qualification & Risk Assessment**
+<img src="docs/images/pre-qualification.png" alt="Pre-Qualification" width="600"><br>
+*Comprehensive eligibility check with age, occupation, and risk validation*
 
-#### **Data Collection Process**
-<img src="docs/images/data-collection1.png" alt="Data Collection - Customer Information"><br>
-*Customer information collection with validation examples*
+#### **2. Customer Information Collection**
+<img src="docs/images/data-collection1.png" alt="Customer Data Collection" width="600"><br>
+*Streamlined personal details collection with validation*
 
-<img src="docs/images/data-collection2.png" alt="Data Collection - Vehicle Information"><br>
-*Vehicle selection and configuration with bounds validation*
+#### **3. Vehicle Configuration**
+<img src="docs/images/data-collection2.png" alt="Vehicle Data Collection" width="600"><br>
+*Vehicle selection and configuration with enhanced validation*
 
-#### **Quote Calculation Results**
-<img src="docs/images/quote-results.png" alt="Quote Results"><br>
-*Detailed premium breakdown with discounts, penalties, and tax calculations*
+#### **4. Information Summary & Confirmation**
+<img src="docs/images/information-summary.png" alt="Information Summary" width="600"><br>
+*Complete data review with risk assessment from pre-qualification*
 
-### **Project Structure Overview**
-<img src="docs/images/project-structure.png" alt="Project Structure"><br>
-*Clean, modular architecture with separation of concerns*
+#### **5. Quote Calculation & Results**
+<img src="docs/images/quote-results.png" alt="Quote Results" width="600"><br>
+*Detailed premium breakdown with accurate calculations*
+
+### **Technical Features**
+
+#### **Validation & Error Handling**
+
+**Pre-Qualification Validation**
+<img src="docs/images/validation-pre-qual.png" alt="Pre-Qualification Validation" width="600"><br>
+*Input format validation and business rule enforcement during pre-qualification*
+
+**Vehicle Configuration Validation**
+<img src="docs/images/validation-vehicle.png" alt="Vehicle Validation" width="600"><br>
+*Range validation and option selection validation for vehicle configuration*
+
+
 
 ---
 
@@ -58,6 +73,7 @@ Insurance quote calculator that demonstrates business logic implementation, data
 
 3. **Run the application**
    - In Gosu IDE, use the **Run** button in the toolbar
+   - Or run the `RunMe.gsp` file directly
 
 ## 📁 Project Structure
 
@@ -65,7 +81,7 @@ Insurance quote calculator that demonstrates business logic implementation, data
 src/main/gosu/
 ├── app/                          # Application layer
 │   ├── ApplicationController.gs  # Main application orchestrator
-│   ├── QuoteFlowController.gs    # Quote collection workflow
+│   ├── QuoteFlowController.gs    # Optimized quote collection workflow
 │   └── RunMe.gsp                 # Application entry point
 ├── collector/                    # Data collection layer
 │   ├── AddressCollector.gs       # Address data collection
@@ -78,13 +94,13 @@ src/main/gosu/
 │   ├── ClaimsHistory.gs          # Claims history entity
 │   ├── Customer.gs               # Customer entity
 │   ├── DrivingHistory.gs         # Driving history entity
-│   ├── PreQualResult.gs          # Pre-qualification result
+│   ├── PreQualResult.gs          # Pre-qualification result (single source of truth)
 │   ├── Quote.gs                  # Quote and premium calculation
 │   ├── Vehicle.gs                # Vehicle entity
 │   └── VehicleOption.gs          # Vehicle options
 ├── service/                      # Business logic layer
 │   ├── BusinessRuleValidator.gs  # Business rule validation
-│   ├── QuoteDataOrchestrator.gs  # Data orchestration
+│   ├── QuoteDataOrchestrator.gs  # Streamlined data orchestration
 │   └── ValidationEngine.gs       # Input validation engine
 └── util/                         # Utilities
     └── InputHandler.gs           # User input handling
@@ -106,11 +122,11 @@ src/main/gosu/
 - Business rule strategies in `BusinessRuleValidator`
 
 ### **Orchestrator Pattern**
-- `QuoteDataOrchestrator` coordinates data collection across multiple collectors
+- `QuoteDataOrchestrator` coordinates streamlined data collection
 - `PreQualResult` serves as single source of truth for all risk assessment data
 
 ### **Optimized Data Flow**
-- **Pre-Qualification** - Collects all risk assessment data (penalty points, convictions, accidents)
+- **Pre-Qualification** - Collects all risk assessment data (penalty points, convictions, accidents) in one step
 - **Streamlined Collection** - Customer, address, and vehicle data without redundancy
 - **Single Source of Truth** - Risk data flows from pre-qualification to final quote
 - **Eliminated Duplication** - No separate driving/claims history collection steps
@@ -144,14 +160,14 @@ src/main/gosu/
 
 ## 🎮 User Experience Features
 
-### **Intuitive Flow**
-1. **Pre-Qualification** - Quick eligibility check with risk assessment
-2. **Data Collection** - Structured information gathering with pre-populated data
+### **Optimized Flow**
+1. **Pre-Qualification** - Comprehensive eligibility check with risk assessment
+2. **Data Collection** - Streamlined information gathering with pre-populated data
 3. **Confirmation** - Review and confirm all details with restart options
-4. **Quote Calculation** - Premium calculation with breakdown
+4. **Quote Calculation** - Premium calculation with accurate breakdown
 5. **Acceptance** - Quote acceptance or restart options
 
-### **Error Handling**
+### **Enhanced Error Handling**
 - **Graceful Cancellation** - Users can cancel at any time
 - **Clear Error Messages** - Specific validation feedback
 - **Retry Options** - Restart from any point
@@ -267,4 +283,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ during a graduate program and refined through continuous learning and improvement.**
 
-*This project demonstrates professional software development practices while providing a practical, real-world application of insurance quote calculation.* 
+*This project demonstrates professional software development practices while providing a practical, real-world application of insurance quote calculation with optimized architecture and streamlined user experience.* 

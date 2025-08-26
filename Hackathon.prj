@@ -9,7 +9,9 @@
     "src/main/gosu/domain/DrivingHistory.gs",
     "src/main/gosu/domain/Quote.gs",
     "src/main/gosu/service/QuoteDataOrchestrator.gs",
-    "src/main/gosu/service/BusinessRuleValidator.gs"
+    "src/main/gosu/service/BusinessRuleValidator.gs",
+    "src/main/gosu/domain/VehicleOption.gs",
+    "src/main/gosu/app/ApplicationController.gs"
   ],
   "SourcePath": [
     "src/main/gosu"
