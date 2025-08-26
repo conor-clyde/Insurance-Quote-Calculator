@@ -1,48 +1,73 @@
 # 🚗 Insurance Quote Calculator
-[![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
-[![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
-A console-based insurance quote calculator built with Gosu. Implements real-world insurance business rules, validation, and clean architecture patterns — designed as a professional-grade learning project during a graduate program, and refined through continuous improvement.
-b
+[![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/) [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/) [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
+
+A **console-based insurance quote calculator** built with Gosu and Java. Implements **real-world insurance rules**, validation, and clean architecture. Developed during a graduate program and refined for professional-grade learning.
+
+---
+
+## 📌 Table of Contents
+- [Features](#-features)  
+- [Demo & Screenshots](#-demo--screenshots)  
+- [Quick Start](#-quick-start)  
+- [Architecture & Design Patterns](#-architecture--design-patterns)  
+- [Business Rules](#-business-rules)  
+- [User Experience](#-user-experience)  
+- [Technical Implementation](#-technical-implementation)  
+- [Learning Outcomes](#-learning-outcomes)  
+- [Contributing](#-contributing)  
+- [License](#-license)  
+
+---
+
 ## ✨ Features
-- Pre-qualification with risk assessment
-- Customer, vehicle & address data collection with validation
-- Premium calculation with discounts, surcharges & tax
-- Clean architecture (MVC, Strategy, Factory, Orchestrator)
-- Comprehensive error handling & user-friendly flow
+- ✅ Pre-qualification with **risk assessment**  
+- ✅ Customer, vehicle & address **data collection with validation**  
+- ✅ **Premium calculation** with discounts, surcharges & tax  
+- ✅ **Clean architecture**: MVC, Strategy, Factory, Orchestrator  
+- ✅ Comprehensive **error handling** & user-friendly flow  
+
+---
 
 ## 🎬 Demo & Screenshots
 
-### **Complete Demo**
-![Application Demo](docs/images/demo-complete.gif)<br>
-From pre-qualification to final premium calculation
+<details>
+<summary>Click to expand full demo & screenshots</summary>
 
-### **User Journey**
+### Complete Demo
+![Application Demo](docs/images/demo-complete.gif)
+
+### User Journey
 
 | Step | Screenshot | Description |
 |------|------------|-------------|
-| **1. Pre-Qualification & Risk Assessment** | <img src="docs/images/pre-qualification.png" width="320"> | Eligibility check with **age, occupation, and risk validation** |
-| **2. Customer Information Collection** | <img src="docs/images/data-collection1.png" width="320"> | Streamlined collection of **personal details** with validation |
-| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="320"> | Configure **vehicle details and options** with validation |
-| **4. Information Summary & Confirmation** | <img src="docs/images/information-summary.png" width="320"> | Review and confirm all **collected data & risk assessment** |
-| **5. Quote Calculation & Results** | <img src="docs/images/quote-results.png" width="320"> | Detailed **premium breakdown** with accurate calculations |
+| **1. Pre-Qualification** | <img src="docs/images/pre-qualification.png" width="320"> | Eligibility check: **age, occupation, risk factors** |
+| **2. Customer Info** | <img src="docs/images/data-collection1.png" width="320"> | Collects **personal details** |
+| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="320"> | Configure **vehicle details & options** |
+| **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="320"> | Review all collected data |
+| **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="320"> | Detailed **premium breakdown** |
 
-#### **Validation & Error Handling**
+#### Validation & Error Handling
 
 | Feature | Screenshot | Description |
 |---------|------------|-------------|
-| **Pre-Qualification Validation** | <img src="docs/images/validation-pre-qual.png" alt="Pre-Qualification Validation" width="480"> | *Validates input format (dates, names, postcodes) and enforces business rules during eligibility checks.* |
-| **Vehicle Configuration Validation** | <img src="docs/images/validation-vehicle.png" alt="Vehicle Validation" width="480"> | *Ensures correct ranges (e.g. penalty points, ages) and validates vehicle option selections.* |
+| Pre-Qualification Validation | <img src="docs/images/validation-pre-qual.png" width="480"> | Validates **dates, names, postcodes**, enforces eligibility rules |
+| Vehicle Configuration Validation | <img src="docs/images/validation-vehicle.png" width="480"> | Checks **ranges** and validates vehicle options |
+
+</details>
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- **Java 11+**
-- **Gosu 1.14.16** - [Download here](https://gosu-lang.github.io/downloads.html)
+- Java 11+  
+- Gosu 1.14.16 → [Download](https://gosu-lang.github.io/downloads.html)
+
+### Run the Project
+```bash
+git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
+cd Hackathon
 
 ### Run the Project
 1. Clone the repo
@@ -54,6 +79,7 @@ cd Hackathon
 
 3. Run the app
 ▶️ Run button or run RunMe.gsp
+```
 
 ## 📁 Project Structure
 
@@ -88,101 +114,58 @@ src/main/gosu/
 
 ## 🏗️ Architecture & Design Patterns
 - MVC → Domain entities (Model), Console UI (View), Controllers
-- Factory → Vehicle options & pre-qualification results
-- Strategy → Validation & business rule strategies
-- Orchestrator → QuoteDataOrchestrator coordinates data flow
+- Factory → Vehicle options and pre-qualification results
+- Strategy → Validation and business rules
+- Orchestrator → QuoteDataOrchestrator coordinates workflow
 - Single Source of Truth → PreQualResult stores all risk data
 
 ## 💼 Business Rules
 - Pre-Qualification: Age (21–85), postcode (BT47/BT48), penalty points (≤6), no convictions, limited accidents, occupation restrictions
 - Premium Calculation:
-- - Base £300 minimum
+  - Base: £300 minimum
   - Discounts: profession (10%), experience (5%), postcode (5%)
   - Penalties: penalty points (20–50%), accidents (50–100%), vehicle type (up to 500%)
   - Tax: Insurance Premium Tax (12%)
 - Vehicles Covered: Ford Focus, BMW 3 Series, Tesla Model S, Ferrari F430, Rolls Royce Phantom
 
 ## 🎮 User Experience Features
-
-### **Optimized Flow**
-1. **Pre-Qualification** - Comprehensive eligibility check with risk assessment
-2. **Data Collection** - Streamlined information gathering with pre-populated data
-3. **Confirmation** - Review and confirm all details with restart options
-4. **Quote Calculation** - Premium calculation with accurate breakdown
-5. **Acceptance** - Quote acceptance or restart options
-
-### **Enhanced Error Handling**
-- **Graceful Cancellation** - Users can cancel at any time
-- **Clear Error Messages** - Specific validation feedback
-- **Retry Options** - Restart from any point
-- **Data Persistence** - No data loss during retries
-
-### **User-Friendly Features**
-- **Input Validation** - Real-time format checking
-- **Confirmation Steps** - Review before proceeding
-- **Restart Capability** - Start over from pre-qualification
-- **Clear Messaging** - Professional, informative prompts
+- Optimized Flow: Pre-qualification → Data Collection → Confirmation → Quote Calculation → Acceptance
+- Enhanced Error Handling: Graceful cancellation, clear messages, retry options, data persistence
+- User-Friendly Features: Input validation, confirmation steps, restart capability, professional prompts
 
 ## 🔧 Technical Implementation
-
-### **Language Features Used**
-- **Gosu Classes** - Object-oriented design
-- **Type Safety** - Strong typing throughout
-- **Exception Handling** - Comprehensive error management
-- **Collections** - Lists, Maps, and Sets
-- **Date/Time** - LocalDate for age and license calculations
-
-### **Key Algorithms**
-- **Premium Calculation**: Base + discounts - penalties + tax (with accurate display)
-- **Age Calculation**: Period.between() for accurate age computation
-- **Validation Logic**: Regex patterns and business rule enforcement
-- **Data Flow**: Optimized orchestrated collection with single source of truth
-
-### **Performance Considerations**
-- **Efficient Validation** - Early exit on validation failures
-- **Memory Management** - Optimized object lifecycle with minimal variables
-- **User Experience** - Minimal input requirements, smart defaults
-- **Data Efficiency** - Single source of truth eliminates redundancy
-
-## Validation
-- Input validation (dates, postcodes, names, ranges)
-- Business rule enforcement (age, location, accidents, vehicles)
-- Graceful error handling with retries & clear messages
+- Gosu Classes & Type Safety
+- Exception Handling & Validation Engine
+- Collections & Date/Time (LocalDate)
+- Key Algorithms: Premium calculation, age calculation, validation logic, orchestrated data flow
+- Performance: Efficient validation, memory optimization, minimal input requirements
 
 ## 🎯 Learning Outcomes
-- Technical: Gosu mastery, clean architecture, validation engines, business rules
-- Professional: Refactoring, documentation, problem solving, code quality
-### **Technical Skills**
-- **Gosu Language Mastery** - Advanced language features and best practices
-- **Software Architecture** - Design patterns and clean code principles
-- **Business Logic Implementation** - Real-world rule engine development
-- **User Experience Design** - Console-based application UX
-- **Error Handling** - Comprehensive exception management
-
-### **Professional Development**
-- **Project Management** - Self-directed development and iteration
-- **Code Quality** - Refactoring and continuous improvement
-- **Documentation** - Clear, comprehensive project documentation
-- **Problem Solving** - Debugging and issue resolution
-
-## 🤝 Contributing
-This project has completed its purpose for learning, but you are very welcome to use it in your own way:
-- Fork the repository and adapt it for your own projects
-- Use the code as a reference for learning Gosu, clean architecture, and business logic design
-- Open issues for bugs or documentation improvements
-- Submit pull requests if you’d like to suggest enhancements
-🔒 Direct contributions to the main branch are restricted — only forks and pull requests are accepted.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Guidewire** - For language/IDE
-- **Graduate Program** - For the initial project opportunity
+- Technical Skills: Gosu mastery, clean architecture, validation engines, business rules
+- Professional Development: Refactoring, documentation, problem-solving, project management
 
 ---
 
-Built with ❤️ during a graduate program and refined through continuous learning.
-Explore the code, learn Gosu, and see how real-world insurance rules can be modeled with clean architecture.
+## 🤝 Contributing
+This project has completed its purpose for learning, but you are very welcome to use it in your own way:
+- Fork the repository & adapt for your projects
+- Use as reference for Gosu, clean architecture, and business rules
+- Open issues for bugs or documentation improvements
+- Submit pull requests for enhancements
+🔒 Direct contributions to main branch restricted — use forks & PRs
+
+---
+
+## 📄 License
+MIT License — see  [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Guidewire** - Language and IDE
+- **Graduate Program** - Initial project opportunity
+
+---
+
+Built with ❤️ during a graduate program. Explore the code to see real-world insurance rules modeled with clean architecture.
