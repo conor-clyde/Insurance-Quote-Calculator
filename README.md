@@ -1,43 +1,17 @@
-\=# 🚗 Insurance Quote Calculator
-
-[![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/) [![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/) [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
+# 🚗 Insurance Quote Calculator
+[![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
+[![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
 A **console-based insurance quote calculator** built with Gosu and Java. Implements **real-world insurance rules**, validation, and clean architecture. Developed during a graduate program and refined for professional-grade learning.
 
----
-
-## 📌 Table of Contents
-- [Features](#-features)  
-- [Demo & Screenshots](#-demo--screenshots)  
-- [Quick Start](#-quick-start)  
-- [Architecture & Design Patterns](#-architecture--design-patterns)  
-- [Business Rules](#-business-rules)  
-- [User Experience](#-user-experience)  
-- [Technical Implementation](#-technical-implementation)  
-- [Learning Outcomes](#-learning-outcomes)  
-- [Contributing](#-contributing)  
-- [License](#-license)  
-
----
-
-## ✨ Features
-- Pre-qualification with **risk assessment**  
-- Customer, vehicle and address **data collection with validation**  
-- **Premium calculation** with discounts, surcharges and tax  
-- **Clean architecture** (MVC, Strategy, Factory, Orchestrator)
-- **Error handling** and user-friendly flow  
-
----
-
 ## 🎬 Demo & Screenshots
 
-<details>
-<summary>Click to expand full demo & screenshots</summary>
-
-### Complete Demo
+### Complete Application Demo
 ![Application Demo](docs/images/demo-complete.gif)
 
-### User Journey
+### User Journey Screenshots
 
 | Step | Screenshot | Description |
 |------|------------|-------------|
@@ -53,10 +27,6 @@ A **console-based insurance quote calculator** built with Gosu and Java. Impleme
 |---------|------------|-------------|
 | Pre-Qualification Validation | <img src="docs/images/validation-pre-qual.png" width="480"> | Validates **dates, names, postcodes**, enforces eligibility rules |
 | Vehicle Configuration Validation | <img src="docs/images/validation-vehicle.png" width="480"> | Checks **ranges** and validates vehicle options |
-
-</details>
-
----
 
 ## 🚀 Quick Start
 
@@ -77,76 +47,58 @@ File → Open Project → Select Hackathon.prj
 Run RunMe.gsp
 ```
 
----
-
 ## 📁 Project Structure
 
 ```
 src/main/gosu/
 ├── app/                          # Application layer
-├── collector/                    # Data collection
-├── constants/                    # Constants for configuration      
-├── domain/                       # Data models 
-├── service/                      # Business logic   
-└── util/                         # Utilities     
+│   ├── ApplicationController.gs  # Main application orchestrator
+│   ├── QuoteFlowController.gs    # Optimized quote collection workflow
+│   └── RunMe.gsp                 # Application entry point
+├── collector/                    # Data collection layer
+│   ├── AddressCollector.gs       # Address data collection
+│   ├── CustomerCollector.gs      # Customer data collection
+│   └── VehicleCollector.gs       # Vehicle data collection
+├── constants/                    # Configuration
+│   └── Constants.gs              # Business rules and constants
+├── domain/                       # Data models
+│   ├── Address.gs                # Address entity
+│   ├── ClaimsHistory.gs          # Claims history entity
+│   ├── Customer.gs               # Customer entity
+│   ├── DrivingHistory.gs         # Driving history entity
+│   ├── PreQualResult.gs          # Pre-qualification result (single source of truth)
+│   ├── Quote.gs                  # Quote and premium calculation
+│   ├── Vehicle.gs                # Vehicle entity
+│   └── VehicleOption.gs          # Vehicle options
+├── service/                      # Business logic layer
+│   ├── BusinessRuleValidator.gs  # Business rule validation
+│   ├── QuoteDataOrchestrator.gs  # Streamlined data orchestration
+│   └── ValidationEngine.gs       # Input validation engine
+└── util/                         # Utilities
+    └── InputHandler.gs           # User input handling
 ```
 
----
+## ✨ Key Features
+
+- **Pre-qualification System** - Age, postcode, penalty points, accident history validation
+- **Premium Calculation** - Base premium with discounts, penalties, and tax
+- **Vehicle Coverage** - Multiple vehicle types with tracker requirements
+- **Clean Architecture** - MVC, Factory, Strategy, and Orchestrator patterns
+- **Comprehensive Validation** - Input format and business rule enforcement
+- **User-Friendly Flow** - Streamlined data collection with error handling
 
 ## 🏗️ Architecture & Design Patterns
-- MVC → Domain entities (Model), Console UI (View), Controllers
-- Factory → Vehicle options and pre-qualification results
-- Strategy → Validation and business rules
-- Orchestrator → QuoteDataOrchestrator coordinates workflow
-- Single Source of Truth → PreQualResult stores all risk data
 
-## 💼 Business Rules
-- Pre-Qualification: Age (21–85), postcode (BT47/BT48), penalty points (≤6), no convictions, limited accidents, occupation restrictions
-- Premium Calculation:
-  - Base: £300 minimum
-  - Discounts: profession (10%), experience (5%), postcode (5%)
-  - Penalties: penalty points (20–50%), accidents (50–100%), vehicle type (up to 500%)
-  - Tax: Insurance Premium Tax (12%)
-- Vehicles Covered: Ford Focus, BMW 3 Series, Tesla Model S, Ferrari F430, Rolls Royce Phantom
-
-## 🎮 User Experience Features
-- Optimized Flow: Pre-qualification → Data Collection → Confirmation → Quote Calculation → Acceptance
-- Enhanced Error Handling: Graceful cancellation, clear messages, retry options, data persistence
-- User-Friendly Features: Input validation, confirmation steps, restart capability, professional prompts
-
-## 🔧 Technical Implementation
-- Gosu Classes & Type Safety
-- Exception Handling & Validation Engine
-- Collections & Date/Time (LocalDate)
-- Key Algorithms: Premium calculation, age calculation, validation logic, orchestrated data flow
-- Performance: Efficient validation, memory optimization, minimal input requirements
-
-## 🎯 Learning Outcomes
-- Technical Skills: Gosu mastery, clean architecture, validation engines, business rules
-- Professional Development: Refactoring, documentation, problem-solving, project management
-
----
-
-## 🤝 Contributing
-This project has completed its purpose for learning, but you are very welcome to use it in your own way:
-- Fork the repository & adapt for your projects
-- Use as reference for Gosu, clean architecture, and business rules
-- Open issues for bugs or documentation improvements
-- Submit pull requests for enhancements
-🔒 Direct contributions to main branch restricted — use forks & PRs
-
----
+- **MVC Pattern** - Domain entities (Model), Console UI (View), Controllers
+- **Factory Pattern** - Vehicle options and pre-qualification results
+- **Strategy Pattern** - Validation and business rules
+- **Orchestrator Pattern** - QuoteDataOrchestrator coordinates workflow
+- **Single Source of Truth** - PreQualResult stores all risk data
 
 ## 📄 License
-MIT License — see  [LICENSE](LICENSE) file for details.
+
+MIT License — see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
-
-- **Guidewire** - Language and IDE
-- **Graduate Program** - Initial project opportunity
-
----
-
-Built with ❤️ during a graduate program. Explore the code to see real-world insurance rules modeled with clean architecture.
+**Built with ❤️ during a graduate program. Explore the code to see real-world insurance rules modeled with clean architecture.**
