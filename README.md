@@ -21,11 +21,11 @@ A **console-based insurance quote calculator** built with Gosu and Java. Impleme
 ---
 
 ## ✨ Features
-- ✅ Pre-qualification with **risk assessment**  
-- ✅ Customer, vehicle & address **data collection with validation**  
-- ✅ **Premium calculation**: Discounts, surcharges and tax  
-- ✅ **Clean architecture**: MVC, Strategy, Factory, Orchestrator  
-- ✅ Comprehensive **error handling** and user-friendly flow  
+- Pre-qualification with **risk assessment**  
+- Customer, vehicle and address **data collection with validation**  
+- **Premium calculation** with discounts, surcharges and tax  
+- **Clean architecture** (MVC, Strategy, Factory, Orchestrator)
+- **Error handling** and user-friendly flow  
 
 ---
 
@@ -84,30 +84,11 @@ Run RunMe.gsp
 ```
 src/main/gosu/
 ├── app/                          # Application layer
-│   ├── ApplicationController.gs  
-│   ├── QuoteFlowController.gs   
-│   └── RunMe.gsp                
 ├── collector/                    # Data collection
-│   ├── AddressCollector.gs       
-│   ├── CustomerCollector.gs    
-│   └── VehicleCollector.gs      
-├── constants/                    # Configuration
-│   └── Constants.gs              
-├── domain/                       # Data models
-│   ├── Address.gs                
-│   ├── ClaimsHistory.gs         
-│   ├── Customer.gs              
-│   ├── DrivingHistory.gs        
-│   ├── PreQualResult.gs          
-│   ├── Quote.gs                  
-│   ├── Vehicle.gs               
-│   └── VehicleOption.gs         
-├── service/                      # Business logic
-│   ├── BusinessRuleValidator.gs  
-│   ├── QuoteDataOrchestrator.gs  
-│   └── ValidationEngine.gs       
-└── util/                         # Utilities
-    └── InputHandler.gs           
+├── constants/                    # Constants for configuration      
+├── domain/                       # Data models 
+├── service/                      # Business logic   
+└── util/                         # Utilities     
 ```
 
 ---
