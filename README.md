@@ -4,15 +4,30 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
-Insurance quote calculator that demonstrates business logic implementation, data validation and professional software architecture. Built as a learning project to understand the Gosu programming language while implementing real-world insurance industry rules and calculations.
+A console-based insurance quote calculator built with Gosu. Implements real-world insurance business rules, validation, and clean architecture patterns — designed as a professional-grade learning project during a graduate program, and refined through continuous improvement.
+
+## ✨ Features
+- Pre-qualification with risk assessment
+- Customer, vehicle & address data collection with validation
+- Premium calculation with discounts, surcharges & tax
+- Clean architecture (MVC, Strategy, Factory, Orchestrator)
+- Comprehensive error handling & user-friendly flow
 
 ## 🎬 Demo & Screenshots
 
-### **Complete Application Demo**
+### **Complete Demo**
 ![Application Demo](docs/images/demo-complete.gif)<br>
-*Full walkthrough of the optimized insurance quote calculation process*
+From pre-qualification to final premium calculation
 
-### **User Journey Screenshots**
+### **User Journey**
+| Step                                       | Screenshot                                                  | Description                                                     |
+| ------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------------------- |
+| **1. Pre-Qualification & Risk Assessment** | <img src="docs/images/pre-qualification.png" width="320">   | Eligibility check with **age, occupation, and risk validation** |
+| **2. Customer Information Collection**     | <img src="docs/images/data-collection1.png" width="320">    | Streamlined collection of **personal details** with validation  |
+| **3. Vehicle Configuration**               | <img src="docs/images/data-collection2.png" width="320">    | Configure **vehicle details and options** with validation       |
+| **4. Information Summary & Confirmation**  | <img src="docs/images/information-summary.png" width="320"> | Review and confirm all **collected data & risk assessment**     |
+| **5. Quote Calculation & Results**         | <img src="docs/images/quote-results.png" width="320">       | Detailed **premium breakdown** with accurate calculations       |
+
 
 #### **1. Pre-Qualification & Risk Assessment**
 <img src="docs/images/pre-qualification.png" alt="Pre-Qualification" width="600"><br>
@@ -46,117 +61,71 @@ Insurance quote calculator that demonstrates business logic implementation, data
 <img src="docs/images/validation-vehicle.png" alt="Vehicle Validation" width="600"><br>
 *Range validation and option selection validation for vehicle configuration*
 
-
-
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
-- **Java 11 or higher**
+- **Java 11+**
 - **Gosu 1.14.16** - [Download here](https://gosu-lang.github.io/downloads.html)
 
-### Installation
+### Run the Project
+1. Clone the repo
+git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
+cd Hackathon
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
-   cd Hackathon
-   ```
+2. Open in Gosu IDE
+# File → Open Project → Select Hackathon.prj
 
-2. **Open in Gosu IDE**
-   - Launch **Gosu IDE**
-   - Go to **File → Open Project**
-   - Navigate to the cloned `Hackathon` folder
-   - Select the `Hackathon.prj` file and click **Open**
-
-3. **Run the application**
-   - In Gosu IDE, use the **Run** button in the toolbar
-   - Or run the `RunMe.gsp` file directly
+3. Run the app
+▶️ Run button or run RunMe.gsp
 
 ## 📁 Project Structure
 
 ```
 src/main/gosu/
 ├── app/                          # Application layer
-│   ├── ApplicationController.gs  # Main application orchestrator
-│   ├── QuoteFlowController.gs    # Optimized quote collection workflow
-│   └── RunMe.gsp                 # Application entry point
-├── collector/                    # Data collection layer
-│   ├── AddressCollector.gs       # Address data collection
-│   ├── CustomerCollector.gs      # Customer data collection
-│   └── VehicleCollector.gs       # Vehicle data collection
+│   ├── ApplicationController.gs  # Main orchestrator
+│   ├── QuoteFlowController.gs    # Quote workflow
+│   └── RunMe.gsp                 # Entry point
+├── collector/                    # Data collection
+│   ├── AddressCollector.gs       
+│   ├── CustomerCollector.gs    
+│   └── VehicleCollector.gs      
 ├── constants/                    # Configuration
-│   └── Constants.gs              # Business rules and constants
+│   └── Constants.gs              
 ├── domain/                       # Data models
-│   ├── Address.gs                # Address entity
-│   ├── ClaimsHistory.gs          # Claims history entity
-│   ├── Customer.gs               # Customer entity
-│   ├── DrivingHistory.gs         # Driving history entity
-│   ├── PreQualResult.gs          # Pre-qualification result (single source of truth)
-│   ├── Quote.gs                  # Quote and premium calculation
-│   ├── Vehicle.gs                # Vehicle entity
-│   └── VehicleOption.gs          # Vehicle options
-├── service/                      # Business logic layer
-│   ├── BusinessRuleValidator.gs  # Business rule validation
-│   ├── QuoteDataOrchestrator.gs  # Streamlined data orchestration
-│   └── ValidationEngine.gs       # Input validation engine
+│   ├── Address.gs                
+│   ├── ClaimsHistory.gs         
+│   ├── Customer.gs              
+│   ├── DrivingHistory.gs        
+│   ├── PreQualResult.gs          
+│   ├── Quote.gs                  
+│   ├── Vehicle.gs               
+│   └── VehicleOption.gs         
+├── service/                      # Business logic
+│   ├── BusinessRuleValidator.gs  
+│   ├── QuoteDataOrchestrator.gs  
+│   └── ValidationEngine.gs       
 └── util/                         # Utilities
-    └── InputHandler.gs           # User input handling
+    └── InputHandler.gs           
 ```
 
 ## 🏗️ Architecture & Design Patterns
+- MVC → Domain entities (Model), Console UI (View), Controllers
+- Factory → Vehicle options & pre-qualification results
+- Strategy → Validation & business rule strategies
+- Orchestrator → QuoteDataOrchestrator coordinates data flow
+- Single Source of Truth → PreQualResult stores all risk data
 
-### **MVC Pattern**
-- **Model**: Domain entities (`Customer`, `Vehicle`, `Quote`, etc.)
-- **View**: Console-based user interface
-- **Controller**: `ApplicationController` and `QuoteFlowController`
-
-### **Factory Pattern**
-- `VehicleOption` factory for creating vehicle selections
-- `PreQualResult` factory for pre-qualification outcomes
-
-### **Strategy Pattern**
-- Validation strategies in `ValidationEngine`
-- Business rule strategies in `BusinessRuleValidator`
-
-### **Orchestrator Pattern**
-- `QuoteDataOrchestrator` coordinates streamlined data collection
-- `PreQualResult` serves as single source of truth for all risk assessment data
-
-### **Optimized Data Flow**
-- **Pre-Qualification** - Collects all risk assessment data (penalty points, convictions, accidents) in one step
-- **Streamlined Collection** - Customer, address, and vehicle data without redundancy
-- **Single Source of Truth** - Risk data flows from pre-qualification to final quote
-- **Eliminated Duplication** - No separate driving/claims history collection steps
-
-## 💼 Business Rules & Features
-
-### **Pre-Qualification Checks**
-- ✅ Age validation (21-85 years)
-- ✅ Geographic restrictions (BT47/BT48 postcodes only)
-- ✅ Penalty points validation (≤ 6 points)
-- ✅ Non-motoring convictions check
-- ✅ Accident history validation
-- ✅ Occupation restrictions
-
-### **Premium Calculation**
-- **Base Premium**: £300 minimum
-- **Discounts**: Professional occupation (10%), driving experience (5%), postcode (5%)
-- **Penalties**: Penalty points (20-50%), vehicle type (0-500%), accidents (50-100%)
-- **Tax**: Insurance Premium Tax (12%)
-
-### **Vehicle Coverage**
-- **Covered Vehicles**: Ford Focus, BMW 3 Series, Tesla Model S, Ferrari F430, Rolls Royce Phantom
-- **Tracker Requirements**: Vehicles over £100,000 must have tracking devices
-- **Value Limits**: £1,000 - £1,000,000
-
-### **Risk Assessment**
-- **Penalty Points**: 0-6 points allowed, surcharges apply
-- **Accidents**: 0-3 non-fault, 0-2 fault accidents allowed
-- **Convictions**: No non-motoring convictions allowed
-- **Age Restrictions**: 21-85 years old
+## 💼 Business Rules
+- Pre-Qualification: Age (21–85), postcode (BT47/BT48), penalty points (≤6), no convictions, limited accidents, occupation restrictions
+- Premium Calculation:
+- - Base £300 minimum
+  - Discounts: profession (10%), experience (5%), postcode (5%)
+  - Penalties: penalty points (20–50%), accidents (50–100%), vehicle type (up to 500%)
+  - Tax: Insurance Premium Tax (12%)
+- Vehicles Covered: Ford Focus, BMW 3 Series, Tesla Model S, Ferrari F430, Rolls Royce Phantom
 
 ## 🎮 User Experience Features
 
@@ -200,52 +169,14 @@ src/main/gosu/
 - **User Experience** - Minimal input requirements, smart defaults
 - **Data Efficiency** - Single source of truth eliminates redundancy
 
-## 🧪 Testing & Validation
-
-### **Input Validation**
-- **Date Formats** - DD/MM/YYYY validation
-- **Postcodes** - UK postcode format validation
-- **Names** - Character and length validation
-- **Numbers** - Range and type validation
-
-### **Business Rule Validation**
-- **Age Requirements** - 21-85 years old
-- **Geographic Coverage** - BT47/BT48 postcodes only
-- **Risk Assessment** - Penalty points, convictions, accidents
-- **Vehicle Coverage** - Specific makes and models only
-
-## 📈 Project Evolution
-
-### **Development Phases**
-1. **Initial Development** - Basic quote calculator during graduate program
-2. **Architecture Refinement** - Improved code structure and patterns
-3. **User Experience Enhancement** - Better flow and error handling
-4. **Business Logic Completion** - Comprehensive validation and calculation
-5. **Performance Optimization** - Streamlined data flow and reduced complexity
-6. **Final Polish** - Documentation and code cleanup
-
-### **Recent Optimizations (Latest)**
-- **Streamlined Data Collection** - Eliminated redundant RiskAssessmentData class and removed duplicate driving/claims history collection steps
-- **Code Cleanup** - Removed unused DrivingHistoryCollector and ClaimsHistoryCollector files
-- **Single Source of Truth** - PreQualResult serves as central data store
-- **Minimal Variable Usage** - Reduced from 25+ to ~15 essential variables
-- **Streamlined Validation** - Direct integer comparisons instead of boolean flags
-- **Enhanced Data Flow** - Cleaner pre-qualification to domain object transfer
-- **Fixed Premium Calculation** - Corrected display logic to match Quote calculations
-
-### **Key Improvements Made**
-- ✅ **Eliminated Redundant Input** - Pre-qualification data flows through the system
-- ✅ **Enhanced Error Messages** - Clear, actionable feedback
-- ✅ **Improved User Flow** - Logical progression with confirmation steps
-- ✅ **Better Architecture** - Clean separation of concerns
-- ✅ **Comprehensive Validation** - Robust business rule enforcement
-- ✅ **Optimized Data Flow** - Single source of truth with PreQualResult
-- ✅ **Reduced Complexity** - Eliminated redundant RiskAssessmentData class and streamlined data collection flow
-- ✅ **Minimal Variables** - Streamlined data structures for better performance
-- ✅ **Accurate Calculations** - Fixed premium calculation display logic
+## Validation
+- Input validation (dates, postcodes, names, ranges)
+- Business rule enforcement (age, location, accidents, vehicles)
+- Graceful error handling with retries & clear messages
 
 ## 🎯 Learning Outcomes
-
+- Technical: Gosu mastery, clean architecture, validation engines, business rules
+- Professional: Refactoring, documentation, problem solving, code quality
 ### **Technical Skills**
 - **Gosu Language Mastery** - Advanced language features and best practices
 - **Software Architecture** - Design patterns and clean code principles
@@ -260,13 +191,12 @@ src/main/gosu/
 - **Problem Solving** - Debugging and issue resolution
 
 ## 🤝 Contributing
-
-This project was developed as a learning exercise and is currently in a completed state. However, if you're interested in the codebase or have suggestions, feel free to:
-
-- **Fork the repository** for your own learning
-- **Open issues** for bugs or improvements
-- **Submit pull requests** for enhancements
-- **Use as reference** for Gosu development
+This project has completed its purpose for learning, but you are very welcome to use it in your own way:
+- Fork the repository and adapt it for your own projects
+- Use the code as a reference for learning Gosu, clean architecture, and business logic design
+- Open issues for bugs or documentation improvements
+- Submit pull requests if you’d like to suggest enhancements
+🔒 Direct contributions to the main branch are restricted — only forks and pull requests are accepted.
 
 ## 📄 License
 
@@ -274,13 +204,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Gosu Language Team** - For the excellent programming language
+- **Guidewire** - For language/IDE
 - **Graduate Program** - For the initial project opportunity
-- **Insurance Industry** - For the business domain knowledge
-- **Open Source Community** - For inspiration and best practices
 
 ---
 
-**Built with ❤️ during a graduate program and refined through continuous learning and improvement.**
-
-*This project demonstrates professional software development practices while providing a practical, real-world application of insurance quote calculation with optimized architecture and streamlined user experience.* 
+Built with ❤️ during a graduate program and refined through continuous learning.
+Explore the code, learn Gosu, and see how real-world insurance rules can be modeled with clean architecture.
