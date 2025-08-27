@@ -16,11 +16,11 @@ A **console-based insurance quote calculator** built with Gosu and Java. Impleme
 
 | Step | Screenshot | Description |
 |------|------------|-------------|
-| **1. Pre-Qualification** | <img src="docs/images/pre-qualification.png" width="320" alt="Pre-qualification screen showing age, occupation, and risk factor inputs"> | Eligibility check: **age, occupation, risk factors** |
-| **2. Customer Info** | <img src="docs/images/data-collection1.png" width="320" alt="Customer information collection screen with personal details form"> | Collects **personal details** |
-| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="320" alt="Vehicle configuration screen with make, model, and options selection"> | Configure **vehicle details & options** |
-| **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="320" alt="Information summary screen showing all collected data for review"> | Review all collected data |
-| **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="320" alt="Quote results screen with detailed premium breakdown and calculations"> | Detailed **premium breakdown** |
+| **1. Pre-Qualification** | <img src="docs/images/pre-qualification.png" width="480" alt="Pre-qualification screen showing age, occupation, and risk factor inputs"> | Eligibility check: **age, occupation, risk factors** |
+| **2. Customer Info** | <img src="docs/images/data-collection1.png" width="480" alt="Customer information collection screen with personal details form"> | Collects **personal details** |
+| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="480" alt="Vehicle configuration screen with make, model, and options selection"> | Configure **vehicle details & options** |
+| **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="480" alt="Information summary screen showing all collected data for review"> | Review all collected data |
+| **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="480" alt="Quote results screen with detailed premium breakdown and calculations"> | Detailed **premium breakdown** |
 
 ### Validation and Error Handling
 *Comprehensive input validation and business rule enforcement:*
