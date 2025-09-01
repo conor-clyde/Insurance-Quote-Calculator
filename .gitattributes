@@ -1,6 +1,0 @@
-*.gs linguist-language=Gosu
-*.gsp linguist-language=Gosu
-*.prj linguist-language=Gosu
-*.md linguist-language=Markdown
-*.png linguist-vendored
-*.gif linguist-vendored
