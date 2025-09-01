@@ -1,106 +1,148 @@
-# 🚗 Insurance Quote Calculator
-[![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
-[![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
+# Insurance Quote Calculator
 
-A **console-based insurance quote calculator** built with Gosu and Java. Implements **real-world insurance rules**, validation, and clean architecture. Developed during a graduate program and refined for professional-grade learning.
+A comprehensive insurance quote calculation application originally developed in **Gosu** during a hackathon for my job, now **migrated to Java 21** with significant improvements and enhancements.
 
-## 🎬 Demo & Screenshots
+## 🚀 **Project Evolution**
 
-### Complete Application Demo
-![Application Demo](docs/images/demo-complete.gif)
+- **Origin**: Started as a **Gosu/GuideWire hackathon project** for insurance industry work
+- **Migration**: **Completely converted** from Gosu to pure Java 21
+- **Improvements**: Enhanced architecture, better error handling, and modern Java practices
+- **Current State**: **Standalone Java application** with no external dependencies
 
-### User Journey Screenshots
-*Complete walkthrough of the insurance quote process:*
+## ✨ **Key Improvements Made During Migration**
 
-| Step | Screenshot | Description |
-|------|------------|-------------|
-| **1. Pre-Qualification** | <img src="docs/images/pre-qualification.png" width="480" alt="Pre-qualification screen showing age, occupation, and risk factor inputs"> | Eligibility check: **age, occupation, risk factors** |
-| **2. Customer Info** | <img src="docs/images/data-collection1.png" width="480" alt="Customer information collection screen with personal details form"> | Collects **personal details** |
-| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="480" alt="Vehicle configuration screen with make, model, and options selection"> | Configure **vehicle details & options** |
-| **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="480" alt="Information summary screen showing all collected data for review"> | Review all collected data |
-| **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="480" alt="Quote results screen with detailed premium breakdown and calculations"> | Detailed **premium breakdown** |
+- **Modern Java Architecture**: Clean separation of concerns with dedicated packages
+- **Enhanced Error Handling**: Comprehensive validation and user recovery options
+- **Improved User Experience**: Better prompts, clearer error messages, and graceful cancellation
+- **Code Quality**: Full JavaDoc documentation, proper exception handling, and clean OOP patterns
+- **Performance**: Optimized for Java 21 with latest language features
 
-### Validation and Error Handling
-*Comprehensive input validation and business rule enforcement:*
+## 🎯 **Features**
 
-| Feature | Screenshot | Description |
-|---------|------------|-------------|
-| Pre-Qualification Validation | <img src="docs/images/validation-pre-qual.png" width="480" alt="Pre-qualification validation screen showing error messages for invalid inputs"> | Validates **dates, names, postcodes**, enforces eligibility rules |
-| Vehicle Configuration Validation | <img src="docs/images/validation-vehicle.png" width="480" alt="Vehicle validation screen showing range validation and option selection errors"> | Checks **ranges** and validates vehicle options |
+- **Customer Management**: Collect and validate customer information including age, occupation, and driving history
+- **Risk Assessment**: Comprehensive pre-qualification checks for insurance eligibility
+- **Vehicle Coverage**: Support for specific vehicle makes and models with premium adjustments
+- **Premium Calculation**: Advanced premium calculation including discounts, penalties, and IPT
+- **Business Rules**: Sophisticated validation rules for postcodes, age limits, and risk factors
+- **User Experience**: Interactive console interface with validation and error handling
 
-## 🚀 Quick Start
+## 🏗️ **Project Structure**
+```
+src/main/java/
+├── app/                    # Main application controllers
+│   ├── ApplicationController.java
+│   ├── QuoteFlowController.java
+│   └── RunMe.java
+├── collector/              # Data collection classes
+│   ├── AddressCollector.java
+│   ├── CustomerCollector.java
+│   └── VehicleCollector.java
+├── constants/              # Application constants
+│   └── Constants.java
+├── domain/                 # Data models
+│   ├── Address.java
+│   ├── ClaimsHistory.java
+│   ├── Customer.java
+│   ├── DrivingHistory.java
+│   ├── PreQualResult.java
+│   ├── Quote.java
+│   ├── Vehicle.java
+│   └── VehicleOption.java
+├── service/                # Business logic services
+│   ├── BusinessRuleValidator.java
+│   └── QuoteDataOrchestrator.java
+└── util/                   # Utility classes
+    └── InputHandler.java
+```
 
-### Prerequisites
-- Java 11+  
-- Gosu 1.14.16 → [Download](https://gosu-lang.github.io/downloads.html)
+## 📋 **Prerequisites**
 
-### Run the Project
+- **Java 21** or higher (latest LTS version)
+- **Maven 3.6** or higher (optional - can run directly with Java)
+
+## 🛠️ **Building the Project**
+
 ```bash
-1. Clone the repo
-git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
-cd Hackathon
+# Clean and compile
+mvn clean compile
 
-2. Open in Gosu IDE
-File → Open Project → Select Hackathon.prj
-
-3. Run the app
-Run RunMe.gsp
+# Create executable JAR
+mvn package
 ```
 
-## 📁 Project Structure
+## 🚀 **Running the Application**
 
-```
-src/main/gosu/
-├── app/                          # Application layer
-│   ├── ApplicationController.gs  # Main application orchestrator
-│   ├── QuoteFlowController.gs    # Optimized quote collection workflow
-│   └── RunMe.gsp                 # Application entry point
-├── collector/                    # Data collection layer
-│   ├── AddressCollector.gs       # Address data collection
-│   ├── CustomerCollector.gs      # Customer data collection
-│   └── VehicleCollector.gs       # Vehicle data collection
-├── constants/                    # Configuration
-│   └── Constants.gs              # Business rules and constants
-├── domain/                       # Data models
-│   ├── Address.gs                # Address entity
-│   ├── ClaimsHistory.gs          # Claims history entity
-│   ├── Customer.gs               # Customer entity
-│   ├── DrivingHistory.gs         # Driving history entity
-│   ├── PreQualResult.gs          # Pre-qualification result (single source of truth)
-│   ├── Quote.gs                  # Quote and premium calculation
-│   ├── Vehicle.gs                # Vehicle entity
-│   └── VehicleOption.gs          # Vehicle options
-├── service/                      # Business logic layer
-│   ├── BusinessRuleValidator.gs  # Business rule validation
-│   ├── QuoteDataOrchestrator.gs  # Streamlined data orchestration
-│   └── ValidationEngine.gs       # Input validation engine
-└── util/                         # Utilities
-    └── InputHandler.gs           # User input handling
+### **Option 1: Direct Java (Recommended)**
+```bash
+# Navigate to source directory
+cd src/main/java
+
+# Compile all Java files
+javac -cp . app/*.java collector/*.java constants/*.java domain/*.java service/*.java util/*.java
+
+# Run the application
+java app.RunMe
 ```
 
-## ✨ Key Features
+### **Option 2: With Maven**
+```bash
+# Run with Maven
+mvn exec:java -Dexec.mainClass="app.RunMe"
 
-- **Pre-qualification System** - Age, postcode, penalty points, accident history validation
-- **Premium Calculation** - Base premium with discounts, penalties, and tax
-- **Vehicle Coverage** - Multiple vehicle types with tracker requirements
-- **Clean Architecture** - MVC, Factory, Strategy, and Orchestrator patterns
-- **Comprehensive Validation** - Input format and business rule enforcement
-- **User-Friendly Flow** - Streamlined data collection with error handling
+# Or run the JAR file
+java -jar target/insurance-quote-calculator-1.0.0.jar
+```
 
-## 🏗️ Architecture & Design Patterns
+## 💼 **Business Rules**
 
-- **MVC Pattern** - Domain entities (Model), Console UI (View), Controllers
-- **Factory Pattern** - Vehicle options and pre-qualification results
-- **Strategy Pattern** - Validation and business rules
-- **Orchestrator Pattern** - QuoteDataOrchestrator coordinates workflow
-- **Single Source of Truth** - PreQualResult stores all risk data
+### **Coverage Limits**
+- **Age Range**: 21-85 years old
+- **Postcodes**: Only BT47 and BT48 areas
+- **Vehicles**: Specific makes/models only (Ford Focus, BMW 3 Series, Tesla Model S, Ferrari F430, Rolls Royce Phantom)
 
-## 📄 License
+### **Premium Factors**
+- **Base Premium**: £300 minimum
+- **Discounts**: Professional occupation (10%), driving experience (5%), BT47 postcode (5%)
+- **Penalties**: Vehicle-specific multipliers, penalty points, accident history, postcode surcharges
+- **Tax**: 12% Insurance Premium Tax (IPT)
 
-MIT License — see [LICENSE](LICENSE) file for details.
+### **Risk Assessment**
+- **Maximum Penalty Points**: 6
+- **Maximum Accidents**: 3 non-fault, 2 fault
+- **Excluded Occupations**: Professional gamblers
+
+## 📖 **Usage**
+
+1. **Start the application** - Run `RunMe.java` or use Maven
+2. **Complete pre-qualification** - Enter age, occupation, postcode, and risk factors
+3. **Provide customer details** - Name, gender, driving license date
+4. **Enter address information** - House number, street, postcode
+5. **Select vehicle details** - Choose from covered vehicles, enter year, registration, value
+6. **Review quote** - See calculated premium with breakdown of discounts and penalties
+
+## 🏗️ **Development Highlights**
+
+This project demonstrates:
+- **Migration Success**: Complete conversion from Gosu to Java with zero functionality loss
+- **Clean Architecture**: Separation of concerns with dedicated packages
+- **Business Logic**: Complex insurance calculations and validation rules preserved
+- **User Input Handling**: Robust input validation and error handling
+- **Object-Oriented Design**: Proper encapsulation and inheritance patterns
+- **Exception Handling**: Comprehensive error management and user recovery
+- **Modern Java**: Leverages Java 21 features and best practices
+
+## 🔄 **Migration Benefits**
+
+- **No Vendor Lock-in**: Pure Java with no GuideWire dependencies
+- **Better Performance**: Native Java execution
+- **Easier Deployment**: Standard JAR file deployment
+- **Wider Developer Pool**: Any Java developer can work on this
+- **Future-Proof**: Latest Java features and long-term support
+
+## 🤝 **Contributing**
+
+For issues or questions, please check the existing issues or create a new one in the repository.
 
 ---
 
-**Built with ❤️ during a graduate program. Explore the code to see real-world insurance rules modeled with clean architecture.**
+*This project represents a successful migration from enterprise Gosu/GuideWire technology to modern, standalone Java, demonstrating the value of technology modernization while preserving business logic and user experience.*
