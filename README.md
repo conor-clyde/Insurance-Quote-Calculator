@@ -1,106 +1,71 @@
 # 🚗 Insurance Quote Calculator
 [![Language](https://img.shields.io/badge/Gosu-1.14.16-blue.svg)](https://gosu-lang.github.io/)
-[![Java](https://img.shields.io/badge/Java-11+-green.svg)](https://openjdk.java.net/)
+[![Runtime](https://img.shields.io/badge/JDK-11+-green.svg)](https://openjdk.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
 
-A **console-based insurance quote calculator** built with Gosu and Java. Implements **real-world insurance rules**, validation, and clean architecture. Developed during a graduate program and refined for professional-grade learning.
+A console-based insurance quote calculator built with Gosu. It models real-world insurance rules such as **eligibility, vehicle configuration, accident history, and premium calculations** — with a clean, structured flow.  
+Originally developed during a graduate program, later refined to demonstrate **professional-grade validation, business rules, and user experience**.
+
+## ✨ Highlights
+- **End-to-End User Journey** — from pre-qualification to premium breakdown  
+- **Comprehensive Validation** — catches invalid inputs & enforces rules  
+- **Premium Calculator** — applies discounts, penalties, and taxes  
+- **User-Friendly Flow** — step-by-step data collection with clear errors  
+- **Clean Structure** — separation of layers and maintainable codebase  
 
 ## 🎬 Demo & Screenshots
-
-### Complete Application Demo
-![Application Demo](docs/images/demo-complete.gif)
+### Application Demo
+<img src="docs/images/demo-complete.gif" alt="Application Demo" width="850">
 
 ### User Journey Screenshots
 *Complete walkthrough of the insurance quote process:*
 
-| Step | Screenshot | Description |
-|------|------------|-------------|
-| **1. Pre-Qualification** | <img src="docs/images/pre-qualification.png" width="480" alt="Pre-qualification screen showing age, occupation, and risk factor inputs"> | Eligibility check: **age, occupation, risk factors** |
-| **2. Customer Info** | <img src="docs/images/data-collection1.png" width="480" alt="Customer information collection screen with personal details form"> | Collects **personal details** |
-| **3. Vehicle Configuration** | <img src="docs/images/data-collection2.png" width="480" alt="Vehicle configuration screen with make, model, and options selection"> | Configure **vehicle details & options** |
-| **4. Summary & Confirmation** | <img src="docs/images/information-summary.png" width="480" alt="Information summary screen showing all collected data for review"> | Review all collected data |
-| **5. Quote Calculation** | <img src="docs/images/quote-results.png" width="480" alt="Quote results screen with detailed premium breakdown and calculations"> | Detailed **premium breakdown** |
+<table>
+  <tr>
+    <th>Step</th>
+    <th>Screenshot</th>
+  </tr>
+  <tr>
+    <td><strong>1. Pre-Qualification</strong><br><em>Eligibility check: age, occupation, risk factors</em></td>
+    <td><img src="docs/images/pre-qualification.png" width="800" alt="Pre-qualification screen showing inputs for age, occupation, and risk factors"></td>
+  </tr>
+  <tr>
+    <td><strong>2. Customer Info</strong><br><em>Collects personal details</em></td>
+    <td><img src="docs/images/data-collection1.png" width="800" alt="Customer information collection screen with personal details form"></td>
+  </tr>
+  <tr>
+    <td><strong>3. Vehicle Configuration</strong><br><em>Configure vehicle details & options</em></td>
+    <td><img src="docs/images/data-collection2.png" width="800" alt="Vehicle configuration screen with make, model, and option selection"></td>
+  </tr>
+  <tr>
+    <td><strong>4. Summary & Confirmation</strong><br><em>Review all collected data</em></td>
+    <td><img src="docs/images/information-summary.png" width="800" alt="Information summary screen showing all collected data for review"></td>
+  </tr>
+  <tr>
+    <td><strong>5. Quote Calculation</strong><br><em>Detailed premium breakdown</em></td>
+    <td><img src="docs/images/quote-results.png" width="800" alt="Quote results screen showing premium breakdown and calculations"></td>
+  </tr>
+</table>
 
-### Validation and Error Handling
-*Comprehensive input validation and business rule enforcement:*
+## 🛡️ Validation & Error Handling
+Includes **comprehensive input validation** (dates, names, postcodes, vehicle ranges, and options) and **strict business rule enforcement** — preventing invalid or ineligible entries.
 
-| Feature | Screenshot | Description |
-|---------|------------|-------------|
-| Pre-Qualification Validation | <img src="docs/images/validation-pre-qual.png" width="480" alt="Pre-qualification validation screen showing error messages for invalid inputs"> | Validates **dates, names, postcodes**, enforces eligibility rules |
-| Vehicle Configuration Validation | <img src="docs/images/validation-vehicle.png" width="480" alt="Vehicle validation screen showing range validation and option selection errors"> | Checks **ranges** and validates vehicle options |
+![Validation Example](docs/images/validation-example.png)
 
 ## 🚀 Quick Start
-
 ### Prerequisites
-- Java 11+  
-- Gosu 1.14.16 → [Download](https://gosu-lang.github.io/downloads.html)
+- **JDK 11+** — [Download](https://adoptium.net/)  
+- **Gosu 1.14.16** — [Download](https://gosu-lang.github.io/downloads.html)
 
 ### Run the Project
 ```bash
-1. Clone the repo
 git clone https://github.com/conor-clyde/alchemy-gosu-hackathon.git
-cd Hackathon
-
-2. Open in Gosu IDE
-File → Open Project → Select Hackathon.prj
-
-3. Run the app
-Run RunMe.gsp
+cd alchemy-gosu-hackathon
+# Open Hackathon.prj in Gosu IDE and run RunMe.gsp
 ```
-
-## 📁 Project Structure
-
-```
-src/main/gosu/
-├── app/                          # Application layer
-│   ├── ApplicationController.gs  # Main application orchestrator
-│   ├── QuoteFlowController.gs    # Optimized quote collection workflow
-│   └── RunMe.gsp                 # Application entry point
-├── collector/                    # Data collection layer
-│   ├── AddressCollector.gs       # Address data collection
-│   ├── CustomerCollector.gs      # Customer data collection
-│   └── VehicleCollector.gs       # Vehicle data collection
-├── constants/                    # Configuration
-│   └── Constants.gs              # Business rules and constants
-├── domain/                       # Data models
-│   ├── Address.gs                # Address entity
-│   ├── ClaimsHistory.gs          # Claims history entity
-│   ├── Customer.gs               # Customer entity
-│   ├── DrivingHistory.gs         # Driving history entity
-│   ├── PreQualResult.gs          # Pre-qualification result (single source of truth)
-│   ├── Quote.gs                  # Quote and premium calculation
-│   ├── Vehicle.gs                # Vehicle entity
-│   └── VehicleOption.gs          # Vehicle options
-├── service/                      # Business logic layer
-│   ├── BusinessRuleValidator.gs  # Business rule validation
-│   ├── QuoteDataOrchestrator.gs  # Streamlined data orchestration
-│   └── ValidationEngine.gs       # Input validation engine
-└── util/                         # Utilities
-    └── InputHandler.gs           # User input handling
-```
-
-## ✨ Key Features
-
-- **Pre-qualification System** - Age, postcode, penalty points, accident history validation
-- **Premium Calculation** - Base premium with discounts, penalties, and tax
-- **Vehicle Coverage** - Multiple vehicle types with tracker requirements
-- **Clean Architecture** - MVC, Factory, Strategy, and Orchestrator patterns
-- **Comprehensive Validation** - Input format and business rule enforcement
-- **User-Friendly Flow** - Streamlined data collection with error handling
-
-## 🏗️ Architecture & Design Patterns
-
-- **MVC Pattern** - Domain entities (Model), Console UI (View), Controllers
-- **Factory Pattern** - Vehicle options and pre-qualification results
-- **Strategy Pattern** - Validation and business rules
-- **Orchestrator Pattern** - QuoteDataOrchestrator coordinates workflow
-- **Single Source of Truth** - PreQualResult stores all risk data
 
 ## 📄 License
-
 MIT License — see [LICENSE](LICENSE) file for details.
 
----
-
-**Built with ❤️ during a graduate program. Explore the code to see real-world insurance rules modeled with clean architecture.**
+Originally built during a graduate program, later refined into a professional-grade showcase of clean architecture and real-world business rules.
